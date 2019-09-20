@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 });
 
-function bindStuff(){
+function bindStuff() {
 
 	// PRESSING THE ENTER KEY ON TEXTBOX
 	$("#verbTextBox").on('keypress', function (e) {
@@ -45,7 +45,8 @@ function buildCurrentSet(count) {
 
 	for (let i = 0; i < count; i++) {
 		// SELECTION PROCEDURE
-		var randomInt = Math.floor(Math.random() * allPhrases.length);
+		//var randomInt = Math.floor(Math.random() * allPhrases.length);
+		var randomInt = 1;
 
 		// BUILD PHRASE SET
 		const phraseData = allPhrases[randomInt];
@@ -87,7 +88,7 @@ function putPhrase(whichPhrase) {
 	var verbData = verbSet[whichPhrase];
 
 	// GET VERB DATA
-
+	// AND SPLITTING THE PHRASE ACCORDING TO THE SEARCHED CONJUGATION
 	var whichConjugation = phraseData.personne - 1; // ARRAY LOCATION
 	var conjugatedVerb = verbData.personnes[whichConjugation];
 	var splittedPhrase = phraseData.phrase.split(conjugatedVerb);
@@ -111,18 +112,38 @@ function putPhrase(whichPhrase) {
 function checkAnswer() {
 	var verbBox = $("#verbTextBox");
 
-	// COMPARING DATA STORED IN ELEMENT
-	if (verbBox.val() == verbBox.attr("data-conjugated")) {
-		console.log("Super");
-		putNextPhrase();
+	if (verbBox.val() == "?") {
+		// IF NOT KNOW, TYPE "?" TO GET THE ANSWER
+		verbBox.val(verbBox.attr("data-conjugated"));
+	} else {
+		// COMPARING DATA STORED IN ELEMENT
+		if (verbBox.val().toLowerCase() == verbBox.attr("data-conjugated")) {
+			console.log("Super");
+
+			// FADE
+			$("#phraseText").animate({
+				opacity: 0.0,
+				//left: "+=50",
+				//height: "toggle"
+			}, 500, function () {
+				putNextPhrase();
+			});
+		}
 	}
 }
 
 function putNextPhrase() {
 
+	atSet++;
 	if (atSet <= phraseSet.length) {
-		atSet++;
 		putPhrase(atSet);
+
+		$("#phraseText").animate({
+			opacity: 1.0,
+			//left: "+=50",
+			//height: "toggle"
+		}, 500);
+
 	} else {
 
 	}
