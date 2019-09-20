@@ -76,8 +76,12 @@ body{
 	color: var(--color-deux);
 	background-color: transparent;
 	border-width: 0px 0px 2px 0px;
-	border-color: var(--color-cinq);
+	border-color: var(--color-une);
 	border-style: solid;
 	width: 170px;
 
+}
+
+#verbTextBox:focus, input:focus{
+	outline: none;
 }
