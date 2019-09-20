@@ -29,7 +29,7 @@ var phrases = [
    },
    {
       phrase: "J'apporte les plans sur le chantier",
-      infinitif: "aporter",
+      infinitif: "apporter",
       mode: "indicatif",
       temp: "present",
       personne: 1

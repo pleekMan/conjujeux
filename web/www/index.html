@@ -11,7 +11,7 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!-- <script src="js/jqueryUI/jquery-ui.js"></script> -->
 	<!-- //<link rel="stylesheet" href="js/jqueryUI/jquery-ui.css"> -->
 
@@ -34,9 +34,9 @@
 
 			<div class="col-md-auto" id="phraseContainer">
 				<div class="d-inline" id="phraseText">
-					Les chevaux et les chevrès et Les chevaux et les chevrès 
-					<span><input id="verbTextBox" type="text" name="verbInput" placeholder="galopent"></span> dans le
-					forêt.
+					<span id="preVerbTextBox">Les chevaux et les chevrès et Les chevaux et les chevrès</span>
+					<span><input id="verbTextBox" data-infinitif="verb" data-conjugated="verb" placeholder="verb" type="text"></span> <span id="postVerbTextBox">dans le
+					forêt.</span>
 				</div>
 			</div>
 

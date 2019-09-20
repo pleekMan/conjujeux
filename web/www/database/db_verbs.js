@@ -13,11 +13,9 @@ var verbs = [
 					"galopons",
 					"galopez",
 					"galopent"
-				]
-
+				],
 			}
-
-		]
+		],
 	},
 	{
 		infinitif: "fermer",
@@ -33,11 +31,9 @@ var verbs = [
 					"fermons",
 					"fermez",
 					"ferment"
-				]
-
+				],
 			}
-
-		]
+		],
 	},
 	{
 		infinitif: "changer",
@@ -53,11 +49,9 @@ var verbs = [
 					"changeons",
 					"changez",
 					"changent"
-				]
-
+				],
 			}
-
-		]
+		],
 	},
 	{
 		infinitif: "arriver",
@@ -73,11 +67,9 @@ var verbs = [
 					"arrivons",
 					"arrivez",
 					"arrivent"
-				]
-
+				],
 			}
-
-		]
+		],
 	},
 	{
 		infinitif: "apporter",
@@ -93,10 +85,9 @@ var verbs = [
 					"apportons",
 					"apportez",
 					"apportent"
-				]
-
+				],
 			}
-		]
+		],
 	},
 	{
 		infinitif: "parler",
@@ -112,9 +103,8 @@ var verbs = [
 					"parlons",
 					"parlez",
 					"parlent"
-				]
-
+				],
 			}
-		]
+		],
 	}
 ]
