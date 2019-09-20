@@ -85,3 +85,12 @@ body{
 #verbTextBox:focus, input:focus{
 	outline: none;
 }
+
+.progress{
+	height: 10px;
+}
+
+#progressBarContainer{
+	margin-top:10px;
+	height: 10px;
+}

@@ -41,6 +41,55 @@ var phrases = [
       temp: "present",
       personne: 5
    },
+   {
+      phrase: "Le vent souffle au bord de la mer",
+      infinitif: "souffler",
+      mode: "indicatif",
+      temp: "present",
+      personne: 3
+   },
+   {
+      phrase: "Les enfants rigolent en regardant le clown.",
+      infinitif: "rigoler",
+      mode: "indicatif",
+      temp: "present",
+      personne: 6
+   },
+   {
+      phrase: "Il doit téléphoner à sa famille.",
+      infinitif: "devoir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 3
+   },
+   {
+      phrase: "Notre cheval s'échappe dans le champs du voisin.",
+      infinitif: "échapper",
+      mode: "indicatif",
+      temp: "present",
+      personne: 3
+   }, 
+    {
+      phrase: "Vous faites de l'exercice physique.",
+      infinitif: "faire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 5
+   },
+   {
+      phrase: "Ils appellent leurs amis.",
+      infinitif: "appeler",
+      mode: "indicatif",
+      temp: "present",
+      personne: 6
+   },
+   {
+      phrase: "Je crois aux extra-terrestres.",
+      infinitif: "croire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 1
+   },
 ]
 
 

@@ -7,18 +7,17 @@ var phraseSet;
 var allVerbs = verbs;
 var verbSet;
 
-var atSet = 0;
+var phraseCount = 5;
+var atPhrase = 0;
 
 //console.log(allPhrases);
-
-var currentPhrases = [];
 
 $(document).ready(function () {
 
 	bindStuff();
 
-	buildCurrentSet(3);
-	putPhrase(atSet);
+	buildCurrentSet(phraseCount);
+	putPhrase(atPhrase);
 
 });
 
@@ -26,8 +25,7 @@ function bindStuff() {
 
 	// PRESSING THE ENTER KEY ON TEXTBOX
 	$("#verbTextBox").on('keypress', function (e) {
-		console.log("something pressed");
-
+		//console.log("something pressed");
 		if (e.which === 13) { // 13 = enter KEY
 			checkAnswer();
 		}
@@ -41,12 +39,13 @@ function buildCurrentSet(count) {
 
 	phraseSet = [];
 	verbSet = [];
-	atSet = 0;
+	atPhrase = 0;
+	updateProgressBar(atPhrase);
 
 	for (let i = 0; i < count; i++) {
 		// SELECTION PROCEDURE
-		//var randomInt = Math.floor(Math.random() * allPhrases.length);
-		var randomInt = 1;
+		var randomInt = Math.floor(Math.random() * allPhrases.length);
+		//var randomInt = 1;
 
 		// BUILD PHRASE SET
 		const phraseData = allPhrases[randomInt];
@@ -120,7 +119,7 @@ function checkAnswer() {
 		if (verbBox.val().toLowerCase() == verbBox.attr("data-conjugated")) {
 			console.log("Super");
 
-			// FADE
+			// FADE OUT
 			$("#phraseText").animate({
 				opacity: 0.0,
 				//left: "+=50",
@@ -134,17 +133,26 @@ function checkAnswer() {
 
 function putNextPhrase() {
 
-	atSet++;
-	if (atSet <= phraseSet.length) {
-		putPhrase(atSet);
+	atPhrase++;
+	if (atPhrase < phraseSet.length) {
+		putPhrase(atPhrase);
 
+		// FADE IN
 		$("#phraseText").animate({
 			opacity: 1.0,
 			//left: "+=50",
 			//height: "toggle"
 		}, 500);
 
+
+		updateProgressBar(atPhrase);
+
 	} else {
 
 	}
+}
+
+function updateProgressBar(phraseNum){
+	$("#progressBar").attr("style","width:"+(((phraseNum+1)/phraseCount) * 100) +"%")
+
 }
