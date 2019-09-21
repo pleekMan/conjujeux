@@ -68,7 +68,7 @@ body{
 #phraseContainer{
 	/* vw = percent-ish in relation to viewport */
 	/* FUNCA, PERO NO ES LO QUE QUIERO. ME PA QUE TENGO QUE AJUSTAR A DIV  */
-	font-size: 2vw;
+	font-size: 7vmin;
 	color: var(--color-troix); 
 }
 
@@ -78,7 +78,7 @@ body{
 	border-width: 0px 0px 2px 0px;
 	border-color: var(--color-une);
 	border-style: solid;
-	width: 170px;
+	width: 33vmin;
 
 }
 
@@ -88,6 +88,12 @@ body{
 
 .progress{
 	height: 10px;
+	color	: var(--color-quatre);
+}	
+
+.bg-info{
+	/* overriding Bootstrap color */
+	background-color: var(--color-deux)!important;
 }
 
 #progressBarContainer{
@@ -96,8 +102,8 @@ body{
 }
 
 #emojiContainer{
-	margin-top: 50px;
-	font-size: 5vw;
+	margin-top: 20vmin;
+	font-size: 16vmin;
 	color: var(--color-cinq);
 	text-align: center;
 }
@@ -108,4 +114,26 @@ body{
 
 #emojisIncorrectList{
 	display: none;
+}
+
+#scoreContainer{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.scoreButton{
+	width: 10vmin;
+	height: 10vmin;
+	background-color: var(--color-deux);
+	display: inline-block;
+	font-size: 5vmin;
+	padding-top: 5px;
+	color: var(--color-cinq);
+	
+}
+
+#playButton{
+	background-color: var(--color-quatre);
+	cursor: -webkit-grab;
+	cursor: grab;
 }

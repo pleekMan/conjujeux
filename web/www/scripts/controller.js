@@ -17,9 +17,8 @@ var score = 0;
 $(document).ready(function () {
 
 	bindStuff();
+	reStart();
 
-	buildCurrentSet(phraseCount);
-	putPhrase(atPhrase);
 
 });
 
@@ -33,9 +32,18 @@ function bindStuff() {
 		}
 	});
 
-
+	$("#playButton").on("mousedown", function () {
+		reStart();
+	});
 }
 
+function reStart() {
+	buildCurrentSet(phraseCount);
+	putPhrase(atPhrase);
+
+	$("#playButton").hide();
+	fadeInPhrase();
+}
 
 
 
@@ -123,13 +131,13 @@ function checkAnswer() {
 	if (verbBox.val() == "?") {
 		// IF NOT KNOW, TYPE "?" TO GET THE ANSWER
 		verbBox.val(verbBox.attr("data-conjugated"));
+		score--;
 	} else {
 		// COMPARING DATA STORED IN ELEMENT
 		if (verbBox.val().toLowerCase() == verbBox.attr("data-conjugated")) {
 			// CORRECT..!!
 			score++;
 			console.log("Score: " + score);
-
 
 			displayEmoji("correct");
 
@@ -158,23 +166,27 @@ function putNextPhrase() {
 		putPhrase(atPhrase);
 
 		// FADE IN
-		$("#phraseText").animate({
-			opacity: 1.0,
-			//left: "+=50",
-			//height: "toggle"
-		}, 500);
-
+		fadeInPhrase();
 
 		updateProgressBar(atPhrase);
 
 	} else {
-
+		$("#playButton").show();
 	}
+}
+
+function fadeInPhrase(){
+	// FADE IN
+	$("#phraseText").animate({
+		opacity: 1.0,
+		//left: "+=50",
+		//height: "toggle"
+	}, 500);
 }
 
 function updateProgressBar(phraseNum) {
 	$("#progressBar").attr("style", "width:" + (((phraseNum + 1) / phraseCount) * 100) + "%")
-
+	$("#scoreText").text(score + "/" + phraseCount);
 }
 
 function generateRandomNonRepeatableNums(count, max) {
@@ -206,9 +218,9 @@ function displayEmoji(state) {
 	let emoji = $("#emojiContainer");
 	emoji.text(selectedEmoji.text());
 
-	$("#emojiContainer").fadeIn(1000, function () {
+	$("#emojiContainer").fadeIn(200, function () {
 		//WHEN COMPLETED
-		$("#emojiContainer").fadeOut(1000, function () {
+		$("#emojiContainer").fadeOut(2000, function () {
 		});
 	});
 
