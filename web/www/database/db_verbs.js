@@ -233,4 +233,180 @@ var verbs = [
 			}
 		],
 	},
+	{
+		infinitif: "prendre",
+		group: 3,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"prends",
+					"prends",
+					"prend",
+					"prenons",
+					"prenez",
+					"prennent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "vouloir",
+		group: 3,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"veux",
+					"veux",
+					"veut",
+					"voulons",
+					"voulez",
+					"veulent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "recevoir",
+		group: 3,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"reçois",
+					"reçois",
+					"reçoit",
+					"recevons",
+					"recevez",
+					"reçoivent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "commencer",
+		group: 1,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"commence",
+					"commences",
+					"commence",
+					"commençons",
+					"commencez",
+					"commencent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "plevoir",
+		group: 3,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"pleut",
+					"pleuvent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "conduire",
+		group: 3,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"conduis",
+					"conduis",
+					"conduit",
+					"conduisons",
+					"conduisez",
+					"conduisent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "pouvoir",
+		group: 3,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"peux",
+					"peux",
+					"peut",
+					"pouvons",
+					"pouvez",
+					"peuvent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "choisir",
+		group: 2,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"choisis",
+					"choisis",
+					"choisit",
+					"choisissons",
+					"choisisses",
+					"choisissent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "choisir",
+		group: 2,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"choisis",
+					"choisis",
+					"choisit",
+					"choisissons",
+					"choisisses",
+					"choisissent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "réfléchir",
+		group: 2,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"réfléchis",
+					"réfléchis",
+					"réfléchit",
+					"réflécissons",
+					"réfléchissez",
+					"réfléchissent"
+				],
+			}
+		],
+	},
 ]

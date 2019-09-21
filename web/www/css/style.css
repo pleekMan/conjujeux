@@ -94,3 +94,10 @@ body{
 	margin-top:10px;
 	height: 10px;
 }
+
+#infoThingy{
+	margin-top: 50px;
+	font-size: 5vw;
+	color: var(--color-cinq);
+	text-align: center;
+}

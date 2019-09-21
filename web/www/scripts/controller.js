@@ -9,6 +9,7 @@ var verbSet;
 
 var phraseCount = 5;
 var atPhrase = 0;
+var score = 0;
 
 //console.log(allPhrases);
 
@@ -40,15 +41,20 @@ function buildCurrentSet(count) {
 	phraseSet = [];
 	verbSet = [];
 	atPhrase = 0;
+	score = 0;
 	updateProgressBar(atPhrase);
 
-	for (let i = 0; i < count; i++) {
+	// SELECTION, FOR NOW
+	var selection = generateRandomNonRepeatableNums(count, allPhrases.length);
+
+	for (let i = 0; i < selection.length; i++) {
+
 		// SELECTION PROCEDURE
-		var randomInt = Math.floor(Math.random() * allPhrases.length);
+		//var randomInt = Math.floor(Math.random() * allPhrases.length);
 		//var randomInt = 1;
 
 		// BUILD PHRASE SET
-		const phraseData = allPhrases[randomInt];
+		const phraseData = allPhrases[selection[i]];
 		phraseSet.push(phraseData);
 
 		// BUILD VERB SET
@@ -117,7 +123,11 @@ function checkAnswer() {
 	} else {
 		// COMPARING DATA STORED IN ELEMENT
 		if (verbBox.val().toLowerCase() == verbBox.attr("data-conjugated")) {
-			console.log("Super");
+			// CORRECT..!!
+			score++;
+			console.log("Score: " + score);
+
+
 
 			// FADE OUT
 			$("#phraseText").animate({
@@ -127,6 +137,16 @@ function checkAnswer() {
 			}, 500, function () {
 				putNextPhrase();
 			});
+		} else {
+			// INCORRECT
+
+			//DISPLAY FUNNY EMOJI
+			$("#infoThingy").fadeIn("slow", function () {
+				//WHEN COMPLETED
+				$("#infoThingy").fadeOut("slow", function () {
+				});
+			});
+
 		}
 	}
 }
@@ -152,7 +172,21 @@ function putNextPhrase() {
 	}
 }
 
-function updateProgressBar(phraseNum){
-	$("#progressBar").attr("style","width:"+(((phraseNum+1)/phraseCount) * 100) +"%")
+function updateProgressBar(phraseNum) {
+	$("#progressBar").attr("style", "width:" + (((phraseNum + 1) / phraseCount) * 100) + "%")
 
+}
+
+function generateRandomNonRepeatableNums(count, max) {
+	var random = [];
+	for (var i = 0; i < count; i++) {
+		var temp = Math.floor(Math.random() * max);
+		if (random.indexOf(temp) == -1) {
+			random.push(temp);
+		}
+		else
+			i--;
+	}
+	return random;
+	//console.log(random)
 }
