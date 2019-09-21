@@ -11,6 +11,7 @@ var phraseCount = 5;
 var atPhrase = 0;
 var score = 0;
 
+
 //console.log(allPhrases);
 
 $(document).ready(function () {
@@ -31,6 +32,8 @@ function bindStuff() {
 			checkAnswer();
 		}
 	});
+
+
 }
 
 
@@ -128,6 +131,7 @@ function checkAnswer() {
 			console.log("Score: " + score);
 
 
+			displayEmoji("correct");
 
 			// FADE OUT
 			$("#phraseText").animate({
@@ -141,11 +145,7 @@ function checkAnswer() {
 			// INCORRECT
 
 			//DISPLAY FUNNY EMOJI
-			$("#infoThingy").fadeIn("slow", function () {
-				//WHEN COMPLETED
-				$("#infoThingy").fadeOut("slow", function () {
-				});
-			});
+			displayEmoji("incorrect");
 
 		}
 	}
@@ -189,4 +189,27 @@ function generateRandomNonRepeatableNums(count, max) {
 	}
 	return random;
 	//console.log(random)
+}
+
+function displayEmoji(state) {
+
+	let emojiList;
+
+	if (state == "correct") {
+		emojiList = $("#emojisCorrectList").children("li");
+	} else {
+		emojiList = $("#emojisIncorrectList").children("li");
+	}
+
+	let selectedEmoji = emojiList.eq(Math.floor(Math.random() * emojiList.length));
+
+	let emoji = $("#emojiContainer");
+	emoji.text(selectedEmoji.text());
+
+	$("#emojiContainer").fadeIn(1000, function () {
+		//WHEN COMPLETED
+		$("#emojiContainer").fadeOut(1000, function () {
+		});
+	});
+
 }

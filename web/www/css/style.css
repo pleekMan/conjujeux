@@ -95,9 +95,17 @@ body{
 	height: 10px;
 }
 
-#infoThingy{
+#emojiContainer{
 	margin-top: 50px;
 	font-size: 5vw;
 	color: var(--color-cinq);
 	text-align: center;
+}
+
+#emojisCorrectList{
+	display: none;
+}
+
+#emojisIncorrectList{
+	display: none;
 }
