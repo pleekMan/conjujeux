@@ -281,14 +281,14 @@ var phrases = [
       infinitif: "pleuvoir",
       mode: "indicatif",
       temp: "present",
-      personne: 2
+      personne: 6
    },
    {
-      phrase: "Nos sœurs conduisons vite",
+      phrase: "Nos sœurs conduisent vite",
       infinitif: "conduire",
       mode: "indicatif",
       temp: "present",
-      personne: 4
+      personne: 6
    },
    {
       phrase: "Mon frère conduit vite",
@@ -324,6 +324,263 @@ var phrases = [
       mode: "indicatif",
       temp: "present",
       personne: 1
+   },
+   //--------------
+   {
+      phrase: "Il croit que nous avons raison",
+      infinitif: "croire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 3
+   },
+   {
+      phrase: "Il croit que nous avons raison",
+      infinitif: "avoir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 4
+   },
+   {
+      phrase: "Je crois que ils ont raison",
+      infinitif: "croire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 1
+   },
+   {
+      phrase: "Je crois que ils ont raison",
+      infinitif: "avoir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 6
+   },
+   {
+      phrase: "Tu crois que vous avez raison",
+      infinitif: "croire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 2
+   },
+   {
+      phrase: "Tu crois que vous avez raison",
+      infinitif: "avoir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 5
+   },
+   //-----------
+   {
+      phrase: "Le héros meurt à la fin du film",
+      infinitif: "mourir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 3
+   },
+   {
+      phrase: "Je meurs à la fin du film",
+      infinitif: "mourir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 1
+   },
+   {
+      phrase: "Tu meurs à la fin du film",
+      infinitif: "mourir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 2
+   },
+   {
+      phrase: "Nous mourons à la fin du film",
+      infinitif: "mourir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 4
+   },
+   {
+      phrase: "Vous mourez à la fin du film",
+      infinitif: "mourir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 5
+   },
+   {
+      phrase: "Elles mortent à la fin du film",
+      infinitif: "meurent",
+      mode: "indicatif",
+      temp: "present",
+      personne: 6
+   },
+   //----------------
+   {
+      phrase: "Quand je lis, je découvre un nouvel monde",
+      infinitif: "lire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 1
+   },
+   {
+      phrase: "Quand je lis, je découvre un nouvel monde",
+      infinitif: "découvrir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 1
+   },
+   {
+      phrase: "Quand tu lis, tu découvres un nouvel monde",
+      infinitif: "lire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 2
+   },
+   {
+      phrase: "Quand tu lis, tu découvres un nouvel monde",
+      infinitif: "découvrir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 2
+   },
+   {
+      phrase: "Quand elle lit, elle découvre un nouvel monde",
+      infinitif: "lire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 3
+   },
+   {
+      phrase: "Quand elle lit, elle découvre un nouvel monde",
+      infinitif: "découvrir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 3
+   },
+   {
+      phrase: "Quand nous lisons, nous découvrons un nouvel monde",
+      infinitif: "lire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 4
+   },
+   {
+      phrase: "Quand nous lisons, nous découvrons un nouvel monde",
+      infinitif: "découvrir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 4
+   },
+   {
+      phrase: "Quand vous lisez, vous découvrez un nouvel monde",
+      infinitif: "lire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 5
+   },
+   {
+      phrase: "Quand vous lisez, vous découvrez un nouvel monde",
+      infinitif: "découvrir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 5
+   },
+   {
+      phrase: "Quand ils lisent, ils découvrent un nouvel monde",
+      infinitif: "lire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 6
+   },
+   {
+      phrase: "Quand ils lisent, ils découvrent un nouvel monde",
+      infinitif: "découvrir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 6
+   },
+   //---------
+   {
+      phrase: "Chaque nuit, je dors",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 1
+   },
+   {
+      phrase: "Chaque nuit, tu dors",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 2
+   },
+   {
+      phrase: "Chaque nuit, il dort",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 3
+   },
+   {
+      phrase: "Chaque nuit, nous dormons",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 4
+   },
+   {
+      phrase: "Chaque nuit, vous dormez",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 5
+   },
+   {
+      phrase: "Chaque nuit, ils dorment",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 6
+   },
+   //---------
+   {
+      phrase: "Je finis toujours à l'heure",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 1
+   },
+   {
+      phrase: "Tu finis toujours à l'heure",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 2
+   },
+   {
+      phrase: "Elle finit toujours à l'heure",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 3
+   },
+   {
+      phrase: "Nous finissons toujours à l'heure",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 4
+   },
+   {
+      phrase: "Vous finissez toujours à l'heure",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 5
+   },
+   {
+      phrase: "Ils finissent toujours à l'heure",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 6
    },
 
 ]

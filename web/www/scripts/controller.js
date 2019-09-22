@@ -7,7 +7,7 @@ var phraseSet;
 var allVerbs = verbs;
 var verbSet;
 
-var phraseCount = 5;
+var phraseCount = 10;
 var atPhrase = 0;
 var score = 0;
 
@@ -18,7 +18,6 @@ $(document).ready(function () {
 
 	bindStuff();
 	reStart();
-
 
 });
 
@@ -58,7 +57,7 @@ function buildCurrentSet(count) {
 	// SELECTION, FOR NOW
 	var selection = generateRandomNonRepeatableNums(count, allPhrases.length);
 
-	for (let i = 0; i < selection.length; i++) {
+	for (var i = 0; i < selection.length; i++) {
 
 		// SELECTION PROCEDURE
 		//var randomInt = Math.floor(Math.random() * allPhrases.length);
@@ -70,15 +69,15 @@ function buildCurrentSet(count) {
 
 		// BUILD VERB SET
 		verbLoop: // FOR break labels TO WORK, ONLY USE STANDARD FOR LOOPS
-		for (let i = 0; i < allVerbs.length; i++) {
-			const verbData = allVerbs[i];
+		for (var j = 0; j < allVerbs.length; j++) {
+			const verbData = allVerbs[j];
 
 			// CHECK INFINITIF
 			if (verbData.infinitif == phraseData.infinitif) {
 
 				// CHECK WHICH CONJUGATION
-				for (let j = 0; j < verbData.conjugaisons.length; j++) {
-					const conjugs = verbData.conjugaisons[j];
+				for (var k = 0; k < verbData.conjugaisons.length; k++) {
+					const conjugs = verbData.conjugaisons[k];
 
 					if (conjugs.mode == phraseData.mode && conjugs.temp == phraseData.temp) {
 						conjugs.group = verbData.group; // ADDING AND EXTRA DATA TO THE WORKING SET
@@ -205,7 +204,7 @@ function generateRandomNonRepeatableNums(count, max) {
 
 function displayEmoji(state) {
 
-	let emojiList;
+	var emojiList;
 
 	if (state == "correct") {
 		emojiList = $("#emojisCorrectList").children("li");
@@ -213,13 +212,13 @@ function displayEmoji(state) {
 		emojiList = $("#emojisIncorrectList").children("li");
 	}
 
-	let selectedEmoji = emojiList.eq(Math.floor(Math.random() * emojiList.length));
+	var selectedEmoji = emojiList.eq(Math.floor(Math.random() * emojiList.length));
 
-	let emoji = $("#emojiContainer");
+	var emoji = $("#emojiContainer");
 	emoji.text(selectedEmoji.text());
 
 	$("#emojiContainer").fadeIn(200, function () {
-		//WHEN COMPLETED
+		//WHEN COMPLETED, fadeOut
 		$("#emojiContainer").fadeOut(2000, function () {
 		});
 	});

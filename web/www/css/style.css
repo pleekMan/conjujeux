@@ -28,7 +28,7 @@ body{
 .vertical-center {
 	min-height: 100%;
 	/* Fallback for vh unit */
-	min-height: 100vh;
+	min-height: 90vh;
 	/* You might also want to use
 								 'height' property instead.
 								 
@@ -103,7 +103,7 @@ body{
 
 #emojiContainer{
 	margin-top: 20vmin;
-	font-size: 16vmin;
+	font-size: 10vmin;
 	color: var(--color-cinq);
 	text-align: center;
 }
@@ -136,4 +136,9 @@ body{
 	background-color: var(--color-quatre);
 	cursor: -webkit-grab;
 	cursor: grab;
+}
+
+.footer{
+	/* EXTENDES BOOTSTRAP */
+	color: gray;
 }

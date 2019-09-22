@@ -1,5 +1,23 @@
 var verbs = [
 	{
+		infinitif: "être",
+		group: 3,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"suis",
+					"es",
+					"est",
+					"sommes",
+					"êtes",
+					"sont"
+				],
+			}
+		],
+	},
+	{
 		infinitif: "galoper",
 		group: 1,
 		conjugaisons: [
@@ -306,7 +324,7 @@ var verbs = [
 		],
 	},
 	{
-		infinitif: "plevoir",
+		infinitif: "pleuvoir",
 		group: 3,
 		conjugaisons: [
 			{
@@ -405,6 +423,114 @@ var verbs = [
 					"réflécissons",
 					"réfléchissez",
 					"réfléchissent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "avoir",
+		group: 3,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"ai",
+					"as",
+					"ai",
+					"avons",
+					"avez",
+					"ont"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "mourir",
+		group: 3,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"meurs",
+					"meurs",
+					"meurt",
+					"mourons",
+					"mourez",
+					"meurent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "lire",
+		group: 3,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"lis",
+					"lis",
+					"lit",
+					"lisons",
+					"lisez",
+					"lisent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "découvrir",
+		group: 2,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"découvre",
+					"découvres",
+					"découvre",
+					"découvrons",
+					"découvrez",
+					"découvrent"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "dormir",
+		group: 3,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"dors",
+					"dors",
+					"dort",
+					"dormons",
+					"dormez",
+					"dorment"
+				],
+			}
+		],
+	},
+	{
+		infinitif: "finir",
+		group: 2,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"finis",
+					"finis",
+					"finit",
+					"finissons",
+					"finissez",
+					"finissent"
 				],
 			}
 		],
