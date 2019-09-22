@@ -132,10 +132,16 @@ body{
 	
 }
 
+#scoreText{
+	color: var(--color-une);
+	font-size: 3vmin;
+}
+
 #playButton{
 	background-color: var(--color-quatre);
 	cursor: -webkit-grab;
 	cursor: grab;
+	margin-top: 8vmin;
 }
 
 .footer{

@@ -185,7 +185,7 @@ function fadeInPhrase(){
 
 function updateProgressBar(phraseNum) {
 	$("#progressBar").attr("style", "width:" + (((phraseNum + 1) / phraseCount) * 100) + "%")
-	$("#scoreText").text(score + "/" + phraseCount);
+	$("#scoreText").text(score + " bonnes réponses sur " + atPhrase);
 }
 
 function generateRandomNonRepeatableNums(count, max) {
