@@ -35,6 +35,13 @@ var phrases = [
       personne: 1
    },
    {
+      phrase: "J'ai apporté les plans sur le chantier",
+      infinitif: "apporter",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 1
+   },
+   {
       phrase: "Vous ne parlez pas assez fort.",
       infinitif: "parler",
       mode: "indicatif",
@@ -327,42 +334,42 @@ var phrases = [
    },
    //--------------
    {
-      phrase: "Il croit que nous avons raison",
+      phrase: "Il croit que nous avons de la raison",
       infinitif: "croire",
       mode: "indicatif",
       temp: "present",
       personne: 3
    },
    {
-      phrase: "Il croit que nous avons raison",
+      phrase: "Il croit que nous avons de la raison",
       infinitif: "avoir",
       mode: "indicatif",
       temp: "present",
       personne: 4
    },
    {
-      phrase: "Je crois que ils ont raison",
+      phrase: "Je crois que ils ont de la raison",
       infinitif: "croire",
       mode: "indicatif",
       temp: "present",
       personne: 1
    },
    {
-      phrase: "Je crois que ils ont raison",
+      phrase: "Je crois que ils ont de la raison",
       infinitif: "avoir",
       mode: "indicatif",
       temp: "present",
       personne: 6
    },
    {
-      phrase: "Tu crois que vous avez raison",
+      phrase: "Tu crois que vous avez de la raison",
       infinitif: "croire",
       mode: "indicatif",
       temp: "present",
       personne: 2
    },
    {
-      phrase: "Tu crois que vous avez raison",
+      phrase: "Tu crois que vous avez de la raison",
       infinitif: "avoir",
       mode: "indicatif",
       temp: "present",
@@ -405,8 +412,8 @@ var phrases = [
       personne: 5
    },
    {
-      phrase: "Elles mortent à la fin du film",
-      infinitif: "meurent",
+      phrase: "Elles meurent à la fin du film",
+      infinitif: "mourir",
       mode: "indicatif",
       temp: "present",
       personne: 6
@@ -581,6 +588,13 @@ var phrases = [
       mode: "indicatif",
       temp: "present",
       personne: 6
+   },
+   {
+      phrase: "Younes lit un livre dans la bibliothéque",
+      infinitif: "lire",
+      mode: "indicatif",
+      temp: "present",
+      personne: 3
    },
 
 ]

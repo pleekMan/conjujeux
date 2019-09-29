@@ -7,6 +7,8 @@ var phraseSet;
 var allVerbs = verbs;
 var verbSet;
 
+var selectedConjugationFilters = ["present"];
+
 var phraseCount = 10;
 var atPhrase = 0;
 var score = 0;
@@ -34,6 +36,17 @@ function bindStuff() {
 	$("#playButton").on("mousedown", function () {
 		reStart();
 	});
+
+	$("#buttonPresent").on("mousedown", function () {
+		changeConjugationFilter($(this));
+	});
+	$("#buttonPasseComposse").on("mousedown", function () {
+		changeConjugationFilter($(this));
+	});
+	$("#buttonFuturProche").on("mousedown", function () {
+		changeConjugationFilter($(this));
+	});
+
 }
 
 function reStart() {
@@ -43,8 +56,6 @@ function reStart() {
 	$("#playButton").hide();
 	fadeInPhrase();
 }
-
-
 
 function buildCurrentSet(count) {
 
@@ -95,6 +106,39 @@ function buildCurrentSet(count) {
 
 
 }
+
+function changeConjugationFilter(whichButton) {
+	let filterInButton = whichButton.attr("data-db_code");
+
+	// ADD/REMOVE FROM filterList
+	let found = -1;
+	// CHECK IF IT'S THERE AND RETURN INDEX
+	for (let i = 0; i < selectedConjugationFilters.length; i++) {
+		if (selectedConjugationFilters[i] == filterInButton) {
+			found = i;
+			break;
+		}
+	}
+	// IF IT WAS FOUND && LIST.lenght IS NOT 1 => REMOVE FROM LIST
+	if (found >= 0 && selectedConjugationFilters.length != 1) {
+		selectedConjugationFilters.splice(found, 1);
+		whichButton.removeClass("buttonOn");
+		whichButton.addClass("buttonOff");
+	} else {
+		// IF IT IS NOT THE SAME THING THAT YOU ARE ADDING
+		if (filterInButton != selectedConjugationFilters[found]) {
+			selectedConjugationFilters.push(filterInButton);
+			whichButton.removeClass("buttonOff");
+			whichButton.addClass("buttonOn");
+		}
+	}
+
+	console.log(selectedConjugationFilters);
+
+
+}
+
+
 
 function putPhrase(whichPhrase) {
 
@@ -174,7 +218,7 @@ function putNextPhrase() {
 	}
 }
 
-function fadeInPhrase(){
+function fadeInPhrase() {
 	// FADE IN
 	$("#phraseText").animate({
 		opacity: 1.0,

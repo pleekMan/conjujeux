@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 	<!-- <script src="js/jqueryUI/jquery-ui.js"></script> -->
 	<!-- //<link rel="stylesheet" href="js/jqueryUI/jquery-ui.css"> -->
 
@@ -51,6 +53,19 @@
 		<li>&#x1F4A3;</li>
 
 	</ul>
+
+
+	<nav class="navbar navbar-default fixed-top" role="navigation" id="navTemp">
+		<div class="navbar-collapse">
+			<ul class="nav navbar-nav navbar-center">
+				<li class="filterButton buttonOff" id="buttonPasseComposse" data-db_code="passe composse">Passé Compossé</li>
+				<li class="filterButton buttonOn" id="buttonPresent" data-db_code="present">Present</li>
+				<li class="filterButton buttonOff" id="buttonFuturProche" data-db_code="futur proche">Futur Proche</li>
+			</ul>
+		</div>
+	</nav>
+
+
 	<div class="fixed-top" id="scoreContainer">
 		<!-- <div class="rounded-circle scoreButton" id="scoreText">0</div> -->
 		<div id="scoreText">0</div>
@@ -74,11 +89,12 @@
 	<div class="container vertical-center">
 		<div class="row justify-content-md-center">
 
+			<!-- SIDE SPACING -->
 			<div class="col">
 				&nbsp;
 			</div>
 
-
+			<!-- PHRASE CONTAINER -->
 			<div class="col-md-auto" id="phraseContainer">
 				<div class="d-inline" id="phraseText">
 					<span id="preVerbTextBox">Avant le verb</span>
@@ -88,7 +104,7 @@
 			</div>
 
 
-
+			<!-- SIDE SPACING -->
 			<div class="col">
 				&nbsp;
 			</div>
@@ -97,7 +113,8 @@
 	</div>
 
 	<footer>
-		<div class="footer text-center py-3">Saisissez la conjugaison correcte. Si vous ne savez pas, saisissez "?". Développé par:
+		<div class="footer text-center">Saisissez la conjugaison correcte. Si vous ne savez pas, saisissez "?". Développé
+			par:
 			<a href="https://www.pleek.net"> www.pleek.net</a>
 		</div>
 	</footer>

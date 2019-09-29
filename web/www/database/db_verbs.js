@@ -104,7 +104,19 @@ var verbs = [
 					"apportez",
 					"apportent"
 				],
-			}
+			},
+			{
+				mode: "indicatif",
+				temp: "passe compose",
+				personnes: [
+					"'ai apporté",
+					"as  apporté",
+					"a apporté",
+					"avons apporté",
+					"avez apporté",
+					"ont apporté"
+				],
+			},
 		],
 	},
 	{
