@@ -7,13 +7,6 @@ var phrases = [
       personne: 6
    },
    {
-      phrase: "Ne ferme pas la fenêtre.",
-      infinitif: "fermer",
-      mode: "indicatif",
-      temp: "present",
-      personne: 1
-   },
-   {
       phrase: "Dans ce restaurant, les serveurs changent les assiettes à chaque plat.",
       infinitif: "changer",
       mode: "indicatif",
@@ -595,6 +588,27 @@ var phrases = [
       mode: "indicatif",
       temp: "present",
       personne: 3
+   },
+   {
+      phrase: "Nous avons mangé un poisson",
+      infinitif: "manger",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 4
+   },
+   {
+      phrase: "Elle a mangé un kebab",
+      infinitif: "manger",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 3
+   },
+   {
+      phrase: "Hier soir, vous avez mangé tôt",
+      infinitif: "manger",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 5
    },
 
 ]

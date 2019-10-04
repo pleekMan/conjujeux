@@ -9,7 +9,7 @@ var verbSet;
 
 var selectedConjugationFilters = ["present"];
 
-var phraseCount = 10;
+var phraseCount = 5;
 var atPhrase = 0;
 var score = 0;
 
@@ -20,6 +20,9 @@ $(document).ready(function () {
 
 	bindStuff();
 	reStart();
+
+
+
 
 });
 
@@ -51,7 +54,6 @@ function bindStuff() {
 
 function reStart() {
 	buildCurrentSet(phraseCount);
-	putPhrase(atPhrase);
 
 	$("#playButton").hide();
 	fadeInPhrase();
@@ -66,17 +68,17 @@ function buildCurrentSet(count) {
 	updateProgressBar(atPhrase);
 
 	// SELECTION, FOR NOW
-	var selection = generateRandomNonRepeatableNums(count, allPhrases.length);
+	//var selection = generateRandomNonRepeatableNums(count, allPhrases.length);
 
-	for (var i = 0; i < selection.length; i++) {
+	selectPhrasesByFilter(selectedConjugationFilters);
 
-		// SELECTION PROCEDURE
-		//var randomInt = Math.floor(Math.random() * allPhrases.length);
-		//var randomInt = 1;
+	for (var i = 0; i < phraseSet.length; i++) {
 
-		// BUILD PHRASE SET
-		const phraseData = allPhrases[selection[i]];
-		phraseSet.push(phraseData);
+		var phraseData = phraseSet[i];
+
+		// 	// BUILD PHRASE SET
+		// 	const phraseData = allPhrases[selection[i]];
+		// 	phraseSet.push(phraseData);
 
 		// BUILD VERB SET
 		verbLoop: // FOR break labels TO WORK, ONLY USE STANDARD FOR LOOPS
@@ -104,8 +106,76 @@ function buildCurrentSet(count) {
 	console.log(phraseSet);
 	console.log(verbSet);
 
+	putPhrase(atPhrase);
+
+
 
 }
+
+function selectPhrasesByFilter(conjugationFilter) {
+
+	// PRESELECT (by index (store the index, not the object) ) ALL THAT MATCH THE FILTERS
+	// APRES, WE WILL SELECT A BUNCH ONLY
+
+	var preSelection = [];
+	for (let i = 0; i < allPhrases.length; i++) {
+		const currentPhrase = allPhrases[i];
+
+		for (let j = 0; j < conjugationFilter.length; j++) {
+			const currentFilter = conjugationFilter[j];
+
+			if (currentPhrase.temp == currentFilter) {
+				//console.log(currentPhrase);
+				preSelection.push(i);
+				break;
+			}
+		}
+	}
+	//console.log("-| PreSelection: " + preSelection);
+	
+
+	// NOW, WE SELECT A BUNCH
+	//var setSelection = generateRandomNonRepeatableNums(phraseCount, preSelection.length);
+	//var setSelection = generateRandomNonRepeatableNums(preSelection.length, preSelection.length);
+
+	// SHUFFLE SELECTION
+	var shuffled = shuffle(preSelection);
+	//console.log("-| Shuffled: " + shuffled);
+
+	// TRIM THE FIRST {phraseCount} ELEMENTS
+	var trimed = shuffled.slice(0,phraseCount);
+	//console.log("-| Trimmed: " + trimed);
+
+	// USE THE SHUFFLED INDEXES TO ADD THE PHRASES TO phraseSet
+	for (let i = 0; i < trimed.length; i++) {
+		phraseSet.push(allPhrases[trimed[i]]);
+	}
+	//console.log(phraseSet);
+
+
+	// DONE
+
+}
+
+function shuffle(array) {
+	// Fisher-Yates (aka Knuth) Shuffle algorithm
+	var currentIndex = array.length, temporaryValue, randomIndex;
+ 
+	// While there remain elements to shuffle...
+	while (0 !== currentIndex) {
+ 
+	  // Pick a remaining element...
+	  randomIndex = Math.floor(Math.random() * currentIndex);
+	  currentIndex -= 1;
+ 
+	  // And swap it with the current element.
+	  temporaryValue = array[currentIndex];
+	  array[currentIndex] = array[randomIndex];
+	  array[randomIndex] = temporaryValue;
+	}
+ 
+	return array;
+ }
 
 function changeConjugationFilter(whichButton) {
 	let filterInButton = whichButton.attr("data-db_code");
@@ -133,7 +203,9 @@ function changeConjugationFilter(whichButton) {
 		}
 	}
 
-	console.log(selectedConjugationFilters);
+	//console.log(selectedConjugationFilters);
+
+	buildCurrentSet(phraseCount);
 
 
 }

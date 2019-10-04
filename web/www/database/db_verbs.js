@@ -90,6 +90,36 @@ var verbs = [
 		],
 	},
 	{
+		infinitif: "manger",
+		group: 1,
+		conjugaisons: [
+			{
+				mode: "indicatif",
+				temp: "present",
+				personnes: [
+					"mange",
+					"manges",
+					"mange",
+					"mangeons",
+					"mangez",
+					"mangent"
+				],
+			},
+			{
+				mode: "indicatif",
+				temp: "passe compose",
+				personnes: [
+					"ai mangé",
+					"as mangé",
+					"a mangé",
+					"avons mangé",
+					"avez mangé",
+					"ont mangé"
+				],
+			}
+		],
+	},
+	{
 		infinitif: "apporter",
 		group: 1,
 		conjugaisons: [
