@@ -23,6 +23,13 @@ body {
 	/* color: thistle */
 }
 
+#introText{
+	padding: 10px 0 5px 0;
+	/* background-color: var(--color-deux); */
+	color: var(--color-cinq);
+	font-size: 15px;
+}
+
 .navbar-nav.navbar-center {
 	display: inline;
 	position: absolute;
@@ -47,7 +54,6 @@ body {
 	border: 1px;
 	border-style: solid;
 	border-radius: 3px;
-
 }
 
 .buttonOff {
@@ -57,13 +63,12 @@ body {
 	border-style: solid;
 	border-color: dimgray;
 	border-radius: 3px;
-
 }
 
-#navTemp {
+/* #navTemp {
 	background-color: rgb(241, 6, 6);
 	color: darksalmon;
-}
+} */
 
 .vertical-center {
 	min-height: 100%;
@@ -108,8 +113,9 @@ body {
 #phraseContainer {
 	/* vw = percent-ish in relation to viewport */
 	/* FUNCA, PERO NO ES LO QUE QUIERO. ME PA QUE TENGO QUE AJUSTAR A DIV  */
-	font-size: 3vw;
+	font-size: 3vmax;
 	color: var(--color-troix);
+	margin-top: 25%;
 }
 
 #verbTextBox {
@@ -118,7 +124,7 @@ body {
 	border-width: 0px 0px 2px 0px;
 	border-color: var(--color-une);
 	border-style: solid;
-	width: 13vw;
+	width: 17vw;
 }
 
 #verbTextBox:focus, input:focus {
@@ -132,17 +138,17 @@ body {
 
 .bg-info {
 	/* overriding Bootstrap color */
-	background-color: var(--color-deux)!important;
+	background-color: var(--color-troix)!important;
 }
 
 #progressBarContainer {
-	margin-top: 60px;
+	margin-top: 120px;
 	height: 10px;
 }
 
 #emojiContainer {
-	margin-top: 20vmin;
-	font-size: 10vmin;
+	margin-top: 180px;
+	font-size: 70px;
 	color: var(--color-cinq);
 	text-align: center;
 }
@@ -161,25 +167,25 @@ body {
 }
 
 .scoreButton {
-	width: 10vmin;
-	height: 10vmin;
+	width: 50px;
+	height: 50px;
 	background-color: var(--color-deux);
 	display: inline-block;
-	font-size: 5vmin;
+	font-size: 27px;
 	padding-top: 5px;
 	color: var(--color-cinq);
 }
 
 #scoreText {
 	color: var(--color-une);
-	font-size: 3vmin;
+	font-size: 20px;
 }
 
 #playButton {
 	background-color: var(--color-quatre);
 	cursor: -webkit-grab;
 	cursor: grab;
-	margin-top: 8vmin;
+	margin-top: 40px;
 }
 
 /* .footer{
@@ -194,6 +200,56 @@ body {
 	width: 100%;
 	height: 30px;
 	padding: 2px;
-	color: gray;
+	color: lightgray;
 	text-align: center;
 }
+
+/* Tooltip */
+
+.tooltip>.tooltip-inner {
+	background-color: transparent;
+	color: var(--color-une);
+	/* border: 1px solid var(--color-back); */
+	border: 0;
+	padding: 10px;
+	font-size: 15px;
+	font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
+/* Tooltip on top */
+.tooltip.top>.tooltip.arrow {
+	/* border-top: 5px solid var(--color-une); */
+	
+	/* border-top-color: #8656f7; */
+	/* background-color: var(--color-une); */
+	/* color: var(--color-une); */
+	/* background-color: 5px solid var(--color-une); */
+
+}
+
+.tooltip.top>.tooltip.arrow {
+	border-style: dotted;
+	border-width: 2px;
+	border-top-color: #8656f7;
+}
+
+
+/* Tooltip on bottom */
+.tooltip.bottom>.tooltip-arrow {
+	/* border-bottom: 5px solid blue; */
+}
+
+/* Tooltip on left */
+.tooltip.left>.tooltip-arrow {
+	/* border-left: 5px solid red; */
+}
+
+/* Tooltip on right */
+.tooltip.right>.tooltip-arrow {
+	/* border-right: 5px solid black; */
+}
+
+/* .tooltip > .tooltip-inner{
+	background-color: #fe5400;
+} */

@@ -21,14 +21,14 @@ var phrases = [
       personne: 6
    },
    {
-      phrase: "J'apporte les plans sur le chantier",
+      phrase: "J'apporte les plans sur le chantier.",
       infinitif: "apporter",
       mode: "indicatif",
       temp: "present",
       personne: 1
    },
    {
-      phrase: "J'ai apporté les plans sur le chantier",
+      phrase: "J'ai apporté les plans sur le chantier.",
       infinitif: "apporter",
       mode: "indicatif",
       temp: "passe compose",
@@ -42,7 +42,7 @@ var phrases = [
       personne: 5
    },
    {
-      phrase: "Le vent souffle au bord de la mer",
+      phrase: "Le vent souffle au bord de la mer.",
       infinitif: "souffler",
       mode: "indicatif",
       temp: "present",
@@ -106,42 +106,42 @@ var phrases = [
       personne: 1
    },
    {
-      phrase: "Si tu veux, tu peux arriver tôt",
+      phrase: "Si tu veux, tu peux arriver tôt.",
       infinitif: "vouloir",
       mode: "indicatif",
       temp: "present",
       personne: 2
    },
    {
-      phrase: "Il doit téléphoner quand il reçoit des nouvelles",
+      phrase: "Il doit téléphoner quand il reçoit des nouvelles.",
       infinitif: "recevoir",
       mode: "indicatif",
       temp: "present",
       personne: 3
    },
    {
-      phrase: "Nous commençons un nouveau cours",
+      phrase: "Nous commençons un nouveau cours.",
       infinitif: "commencer",
       mode: "indicatif",
       temp: "present",
       personne: 4
    },
    {
-      phrase: "Il pleut maintenant",
+      phrase: "Il pleut maintenant.",
       infinitif: "pleuvoir",
       mode: "indicatif",
       temp: "present",
       personne: 1
    },
    {
-      phrase: "Ma sœur conduit vite",
+      phrase: "Ma sœur conduit .",
       infinitif: "conduire",
       mode: "indicatif",
       temp: "present",
       personne: 3
    },
    {
-      phrase: "Mes frères conduisent vite",
+      phrase: "Mes frères conduisent vite.",
       infinitif: "conduire",
       mode: "indicatif",
       temp: "present",
@@ -157,7 +157,7 @@ var phrases = [
       personne: 3
    },
    {
-      phrase: "fermez-vous la porte doucement",
+      phrase: "fermez-vous la porte doucement.",
       infinitif: "fermer",
       mode: "indicatif",
       temp: "present",
@@ -178,7 +178,7 @@ var phrases = [
       personne: 1
    },
    {
-      phrase: "Nous apportons les plans sur le chantier",
+      phrase: "Nous apportons les plans sur le chantier.",
       infinitif: "apporter",
       mode: "indicatif",
       temp: "present",
@@ -192,7 +192,7 @@ var phrases = [
       personne: 2
    },
    {
-      phrase: "Les vents soufflent au bord de la mer",
+      phrase: "Les vents soufflent au bord de la mer.",
       infinitif: "souffler",
       mode: "indicatif",
       temp: "present",
@@ -235,91 +235,91 @@ var phrases = [
    },
    //------
    {
-      phrase: "Ils prennent congé aujourd'hui: ils sont fatigué",
+      phrase: "Ils prennent congé aujourd'hui: ils sont fatigué.",
       infinitif: "prendre",
       mode: "indicatif",
       temp: "present",
       personne: 6
    },
    {
-      phrase: "Ils prennent congé aujourd'hui: ils sont fatigué",
+      phrase: "Ils prennent congé aujourd'hui: ils sont fatigué.",
       infinitif: "être",
       mode: "indicatif",
       temp: "present",
       personne: 6
    },
    {
-      phrase: "Si vous voulez, vous pouvez arriver tôt",
+      phrase: "Si vous voulez, vous pouvez arriver tôt.",
       infinitif: "vouloir",
       mode: "indicatif",
       temp: "present",
       personne: 5
    },
    {
-      phrase: "Si vous voulez, vous pouvez arriver tôt",
+      phrase: "Si vous voulez, vous pouvez arriver tôt.",
       infinitif: "pouvoir",
       mode: "indicatif",
       temp: "present",
       personne: 5
    },
    {
-      phrase: "Ce matin, Je dois téléphoner quand je reçois des nouvelles",
+      phrase: "Ce matin, Je dois téléphoner quand je reçois des nouvelles.",
       infinitif: "devoir",
       mode: "indicatif",
       temp: "present",
       personne: 1
    },
    {
-      phrase: "Tu commences un nouveau cours",
+      phrase: "Tu commences un nouveau cours.",
       infinitif: "commencer",
       mode: "indicatif",
       temp: "present",
       personne: 2
    },
    {
-      phrase: "Ils pleuvent maintenant",
+      phrase: "Ils pleuvent maintenant.",
       infinitif: "pleuvoir",
       mode: "indicatif",
       temp: "present",
       personne: 6
    },
    {
-      phrase: "Nos sœurs conduisent vite",
+      phrase: "Nos sœurs conduisent vite.",
       infinitif: "conduire",
       mode: "indicatif",
       temp: "present",
       personne: 6
    },
    {
-      phrase: "Mon frère conduit vite",
+      phrase: "Mon frère conduit vite.",
       infinitif: "conduire",
       mode: "indicatif",
       temp: "present",
       personne: 3
    },
    {
-      phrase: "Nous choisissons un gâteau",
+      phrase: "Nous choisissons un gâteau.",
       infinitif: "choisir",
       mode: "indicatif",
       temp: "present",
       personne: 4
    },
    {
-      phrase: "Vous réfléchissez sur la mer",
+      phrase: "Vous réfléchissez sur la mer.",
       infinitif: "réfléchir",
       mode: "indicatif",
       temp: "present",
       personne: 5
    },
    {
-      phrase: "Tu choisis un gâteau",
+      phrase: "Tu choisis un gâteau.",
       infinitif: "choisir",
       mode: "indicatif",
       temp: "present",
       personne: 2
    },
    {
-      phrase: "Je réfléchis sur la mer",
+      phrase: "Je réfléchis sur la mer.",
       infinitif: "réfléchir",
       mode: "indicatif",
       temp: "present",
@@ -327,42 +327,42 @@ var phrases = [
    },
    //--------------
    {
-      phrase: "Il croit que nous avons de la raison",
+      phrase: "Il croit que nous avons de la raison.",
       infinitif: "croire",
       mode: "indicatif",
       temp: "present",
       personne: 3
    },
    {
-      phrase: "Il croit que nous avons de la raison",
+      phrase: "Il croit que nous avons de la raison.",
       infinitif: "avoir",
       mode: "indicatif",
       temp: "present",
       personne: 4
    },
    {
-      phrase: "Je crois que ils ont de la raison",
+      phrase: "Je crois que ils ont de la raison.",
       infinitif: "croire",
       mode: "indicatif",
       temp: "present",
       personne: 1
    },
    {
-      phrase: "Je crois que ils ont de la raison",
+      phrase: "Je crois que ils ont de la raison.",
       infinitif: "avoir",
       mode: "indicatif",
       temp: "present",
       personne: 6
    },
    {
-      phrase: "Tu crois que vous avez de la raison",
+      phrase: "Tu crois que vous avez de la raison.",
       infinitif: "croire",
       mode: "indicatif",
       temp: "present",
       personne: 2
    },
    {
-      phrase: "Tu crois que vous avez de la raison",
+      phrase: "Tu crois que vous avez de la raison.",
       infinitif: "avoir",
       mode: "indicatif",
       temp: "present",
@@ -370,42 +370,42 @@ var phrases = [
    },
    //-----------
    {
-      phrase: "Le héros meurt à la fin du film",
+      phrase: "Le héros meurt à la fin du film.",
       infinitif: "mourir",
       mode: "indicatif",
       temp: "present",
       personne: 3
    },
    {
-      phrase: "Je meurs à la fin du film",
+      phrase: "Je meurs à la fin du film.",
       infinitif: "mourir",
       mode: "indicatif",
       temp: "present",
       personne: 1
    },
    {
-      phrase: "Tu meurs à la fin du film",
+      phrase: "Tu meurs à la fin du film.",
       infinitif: "mourir",
       mode: "indicatif",
       temp: "present",
       personne: 2
    },
    {
-      phrase: "Nous mourons à la fin du film",
+      phrase: "Nous mourons à la fin du film.",
       infinitif: "mourir",
       mode: "indicatif",
       temp: "present",
       personne: 4
    },
    {
-      phrase: "Vous mourez à la fin du film",
+      phrase: "Vous mourez à la fin du film.",
       infinitif: "mourir",
       mode: "indicatif",
       temp: "present",
       personne: 5
    },
    {
-      phrase: "Elles meurent à la fin du film",
+      phrase: "Elles meurent à la fin du film.",
       infinitif: "mourir",
       mode: "indicatif",
       temp: "present",
@@ -413,198 +413,198 @@ var phrases = [
    },
    //----------------
    {
-      phrase: "Quand je lis, je découvre un nouvel monde",
+      phrase: "Quand je lis, je découvre un nouvel monde.",
       infinitif: "lire",
       mode: "indicatif",
       temp: "present",
       personne: 1
    },
    {
-      phrase: "Quand je lis, je découvre un nouvel monde",
+      phrase: "Quand je lis, je découvre un nouvel monde.",
       infinitif: "découvrir",
       mode: "indicatif",
       temp: "present",
       personne: 1
    },
    {
-      phrase: "Quand tu lis, tu découvres un nouvel monde",
+      phrase: "Quand tu lis, tu découvres un nouvel monde.",
       infinitif: "lire",
       mode: "indicatif",
       temp: "present",
       personne: 2
    },
    {
-      phrase: "Quand tu lis, tu découvres un nouvel monde",
+      phrase: "Quand tu lis, tu découvres un nouvel monde.",
       infinitif: "découvrir",
       mode: "indicatif",
       temp: "present",
       personne: 2
    },
    {
-      phrase: "Quand elle lit, elle découvre un nouvel monde",
+      phrase: "Quand elle lit, elle découvre un nouvel monde.",
       infinitif: "lire",
       mode: "indicatif",
       temp: "present",
       personne: 3
    },
    {
-      phrase: "Quand elle lit, elle découvre un nouvel monde",
+      phrase: "Quand elle lit, elle découvre un nouvel monde.",
       infinitif: "découvrir",
       mode: "indicatif",
       temp: "present",
       personne: 3
    },
    {
-      phrase: "Quand nous lisons, nous découvrons un nouvel monde",
+      phrase: "Quand nous lisons, nous découvrons un nouvel monde.",
       infinitif: "lire",
       mode: "indicatif",
       temp: "present",
       personne: 4
    },
    {
-      phrase: "Quand nous lisons, nous découvrons un nouvel monde",
+      phrase: "Quand nous lisons, nous découvrons un nouvel monde.",
       infinitif: "découvrir",
       mode: "indicatif",
       temp: "present",
       personne: 4
    },
    {
-      phrase: "Quand vous lisez, vous découvrez un nouvel monde",
+      phrase: "Quand vous lisez, vous découvrez un nouvel monde.",
       infinitif: "lire",
       mode: "indicatif",
       temp: "present",
       personne: 5
    },
    {
-      phrase: "Quand vous lisez, vous découvrez un nouvel monde",
+      phrase: "Quand vous lisez, vous découvrez un nouvel monde.",
       infinitif: "découvrir",
       mode: "indicatif",
       temp: "present",
       personne: 5
    },
    {
-      phrase: "Quand ils lisent, ils découvrent un nouvel monde",
+      phrase: "Quand ils lisent, ils découvrent un nouvel monde.",
       infinitif: "lire",
       mode: "indicatif",
       temp: "present",
       personne: 6
    },
    {
-      phrase: "Quand ils lisent, ils découvrent un nouvel monde",
+      phrase: "Quand ils lisent, ils découvrent un nouvel monde.",
       infinitif: "découvrir",
-      mode: "indicatif",
-      temp: "present",
-      personne: 6
-   },
-   //---------
-   {
-      phrase: "Chaque nuit, je dors",
-      infinitif: "dormir",
-      mode: "indicatif",
-      temp: "present",
-      personne: 1
-   },
-   {
-      phrase: "Chaque nuit, tu dors",
-      infinitif: "dormir",
-      mode: "indicatif",
-      temp: "present",
-      personne: 2
-   },
-   {
-      phrase: "Chaque nuit, il dort",
-      infinitif: "dormir",
-      mode: "indicatif",
-      temp: "present",
-      personne: 3
-   },
-   {
-      phrase: "Chaque nuit, nous dormons",
-      infinitif: "dormir",
-      mode: "indicatif",
-      temp: "present",
-      personne: 4
-   },
-   {
-      phrase: "Chaque nuit, vous dormez",
-      infinitif: "dormir",
-      mode: "indicatif",
-      temp: "present",
-      personne: 5
-   },
-   {
-      phrase: "Chaque nuit, ils dorment",
-      infinitif: "dormir",
       mode: "indicatif",
       temp: "present",
       personne: 6
    },
    //---------
    {
-      phrase: "Je finis toujours à l'heure",
+      phrase: "Chaque nuit, je dors.",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 1
+   },
+   {
+      phrase: "Chaque nuit, tu dors.",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 2
+   },
+   {
+      phrase: "Chaque nuit, il dort.",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 3
+   },
+   {
+      phrase: "Chaque nuit, nous dormons.",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 4
+   },
+   {
+      phrase: "Chaque nuit, vous dormez.",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 5
+   },
+   {
+      phrase: "Chaque nuit, ils dorment.",
+      infinitif: "dormir",
+      mode: "indicatif",
+      temp: "present",
+      personne: 6
+   },
+   //---------
+   {
+      phrase: "Je finis toujours à l'heure.",
       infinitif: "finir",
       mode: "indicatif",
       temp: "present",
       personne: 1
    },
    {
-      phrase: "Tu finis toujours à l'heure",
+      phrase: "Tu finis toujours à l'heure.",
       infinitif: "finir",
       mode: "indicatif",
       temp: "present",
       personne: 2
    },
    {
-      phrase: "Elle finit toujours à l'heure",
+      phrase: "Elle finit toujours à l'heure.",
       infinitif: "finir",
       mode: "indicatif",
       temp: "present",
       personne: 3
    },
    {
-      phrase: "Nous finissons toujours à l'heure",
+      phrase: "Nous finissons toujours à l'heure.",
       infinitif: "finir",
       mode: "indicatif",
       temp: "present",
       personne: 4
    },
    {
-      phrase: "Vous finissez toujours à l'heure",
+      phrase: "Vous finissez toujours à l'heure.",
       infinitif: "finir",
       mode: "indicatif",
       temp: "present",
       personne: 5
    },
    {
-      phrase: "Ils finissent toujours à l'heure",
+      phrase: "Ils finissent toujours à l'heure.",
       infinitif: "finir",
       mode: "indicatif",
       temp: "present",
       personne: 6
    },
    {
-      phrase: "Younes lit un livre dans la bibliothéque",
+      phrase: "Younes lit un livre dans la bibliothéque.",
       infinitif: "lire",
       mode: "indicatif",
       temp: "present",
       personne: 3
    },
    {
-      phrase: "Nous avons mangé un poisson",
+      phrase: "Nous avons mangé un poisson.",
       infinitif: "manger",
       mode: "indicatif",
       temp: "passe compose",
       personne: 4
    },
    {
-      phrase: "Elle a mangé un kebab",
+      phrase: "Elle a mangé un kebab.",
       infinitif: "manger",
       mode: "indicatif",
       temp: "passe compose",
       personne: 3
    },
    {
-      phrase: "Hier soir, vous avez mangé tôt",
+      phrase: "Hier soir, vous avez mangé tôt.",
       infinitif: "manger",
       mode: "indicatif",
       temp: "passe compose",

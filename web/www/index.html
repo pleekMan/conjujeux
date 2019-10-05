@@ -12,7 +12,9 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.bundle.min.js"></script> -->
 
 	<!-- <script src="js/jqueryUI/jquery-ui.js"></script> -->
 	<!-- //<link rel="stylesheet" href="js/jqueryUI/jquery-ui.css"> -->
@@ -55,21 +57,28 @@
 	</ul>
 
 
-	<nav class="navbar navbar-default fixed-top" role="navigation" id="navTemp">
+	<nav class="navbar navbar-default fixed-top" role="navigation">
 		<div class="navbar-collapse">
+			<div class="navbar-center text-center" id="introText">Saisissez la conjugaison correcte. Si vous ne savez pas, saisissez "?"
+			</br> Choisissez les filtres du Temps.
+			</div>
 			<ul class="nav navbar-nav navbar-center">
 				<li class="filterButton buttonOff" id="buttonPasseComposse" data-db_code="passe compose">Passé Composé</li>
 				<li class="filterButton buttonOn" id="buttonPresent" data-db_code="present">Present</li>
-				<li class="filterButton buttonOff" id="buttonFuturProche" data-db_code="futur proche">Futur Proche</li>
+				<!-- <li class="filterButton buttonOff" id="buttonFuturProche" data-db_code="futur proche">Futur Proche</li> -->
 			</ul>
+
+			<div class="nav navbar-nav navbar-center" id="scoreContainer">
+				<!-- <div class="rounded-circle scoreButton" id="scoreText">0</div> -->
+				<div id="scoreText">0</div>
+			</div>
 		</div>
 	</nav>
 
 
-	<div class="fixed-top" id="scoreContainer">
-		<!-- <div class="rounded-circle scoreButton" id="scoreText">0</div> -->
+	<!-- <div class="fixed-top" id="scoreContainer">
 		<div id="scoreText">0</div>
-	</div>
+	</div> -->
 
 	<div class="fixed-top" id="emojiContainer"></div>
 
@@ -77,7 +86,7 @@
 		<div class="rounded-circle scoreButton" id="playButton">&#x25B6;</div>
 	</div>
 
-	<div class="container text-center" id="progressBarContainer">
+	<div class="container fixed-top text-center" id="progressBarContainer">
 		<div class="progress">
 			<div class="progress-bar bg-info" id="progressBar" role="progressbar" style="width: 1%" aria-valuenow="0"
 				aria-valuemin="0" aria-valuemax="10">
@@ -98,8 +107,11 @@
 			<div class="col-md-auto" id="phraseContainer">
 				<div class="d-inline" id="phraseText">
 					<span id="preVerbTextBox">Avant le verb</span>
-					<span><input id="verbTextBox" data-infinitif="verb" data-conjugated="verb" placeholder="verb"
-							type="text"></span> <span id="postVerbTextBox">apres le verb.</span>
+					<span id="tooltipSpan" data-toggle="tooltip" data-placement="top" data-original-title="QueTemp"
+						data-trigger="manual">
+						<input id="verbTextBox" data-infinitif="verb" data-conjugated="verb" placeholder="verb" type="text">
+					</span>
+					<span id="postVerbTextBox">apres le verb.</span>
 				</div>
 			</div>
 
@@ -113,10 +125,11 @@
 	</div>
 
 	<footer>
-		<div class="footer text-center">Saisissez la conjugaison correcte. Si vous ne savez pas, saisissez "?". Développé
-			par:
-			<a href="https://www.pleek.net"> www.pleek.net</a>
+		<div class="footer text-center">Développé par
+			<a target="blank" href="https://www.pleek.net"> www.pleek.net</a>
+			avec beaucoup d’affection, pour Corinne et les étudiants DUEF A2 de l’Université de La Rochelle.
 		</div>
+
 	</footer>
 
 </body>

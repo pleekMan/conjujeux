@@ -9,10 +9,11 @@ var verbSet;
 
 var selectedConjugationFilters = ["present"];
 
-var phraseCount = 5;
+var phraseCount = 20;
 var atPhrase = 0;
 var score = 0;
 
+var tooltip;
 
 //console.log(allPhrases);
 
@@ -20,8 +21,6 @@ $(document).ready(function () {
 
 	bindStuff();
 	reStart();
-
-
 
 
 });
@@ -49,6 +48,12 @@ function bindStuff() {
 	$("#buttonFuturProche").on("mousedown", function () {
 		changeConjugationFilter($(this));
 	});
+
+	// SET UP TOOLTIP
+	$('[data-toggle="tooltip"]').tooltip();
+	tooltip = $("#tooltipSpan");
+	
+
 
 }
 
@@ -132,7 +137,7 @@ function selectPhrasesByFilter(conjugationFilter) {
 		}
 	}
 	//console.log("-| PreSelection: " + preSelection);
-	
+
 
 	// NOW, WE SELECT A BUNCH
 	//var setSelection = generateRandomNonRepeatableNums(phraseCount, preSelection.length);
@@ -143,7 +148,7 @@ function selectPhrasesByFilter(conjugationFilter) {
 	//console.log("-| Shuffled: " + shuffled);
 
 	// TRIM THE FIRST {phraseCount} ELEMENTS
-	var trimed = shuffled.slice(0,phraseCount);
+	var trimed = shuffled.slice(0, phraseCount);
 	//console.log("-| Trimmed: " + trimed);
 
 	// USE THE SHUFFLED INDEXES TO ADD THE PHRASES TO phraseSet
@@ -160,22 +165,22 @@ function selectPhrasesByFilter(conjugationFilter) {
 function shuffle(array) {
 	// Fisher-Yates (aka Knuth) Shuffle algorithm
 	var currentIndex = array.length, temporaryValue, randomIndex;
- 
+
 	// While there remain elements to shuffle...
 	while (0 !== currentIndex) {
- 
-	  // Pick a remaining element...
-	  randomIndex = Math.floor(Math.random() * currentIndex);
-	  currentIndex -= 1;
- 
-	  // And swap it with the current element.
-	  temporaryValue = array[currentIndex];
-	  array[currentIndex] = array[randomIndex];
-	  array[randomIndex] = temporaryValue;
+
+		// Pick a remaining element...
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex -= 1;
+
+		// And swap it with the current element.
+		temporaryValue = array[currentIndex];
+		array[currentIndex] = array[randomIndex];
+		array[randomIndex] = temporaryValue;
 	}
- 
+
 	return array;
- }
+}
 
 function changeConjugationFilter(whichButton) {
 	let filterInButton = whichButton.attr("data-db_code");
@@ -205,7 +210,9 @@ function changeConjugationFilter(whichButton) {
 
 	//console.log(selectedConjugationFilters);
 
-	buildCurrentSet(phraseCount);
+	//buildCurrentSet(phraseCount);
+	reStart(phraseCount);
+	//$("#playButton").hide();
 
 
 }
@@ -238,6 +245,10 @@ function putPhrase(whichPhrase) {
 	verbBox.attr("placeHolder", phraseData.infinitif);
 	verbBox.val("");
 
+	// TOOLTIP
+	updateTooltip(phraseData.temp)
+
+
 }
 
 function checkAnswer() {
@@ -255,6 +266,9 @@ function checkAnswer() {
 			console.log("Score: " + score);
 
 			displayEmoji("correct");
+
+			// TOOLTIP
+			tooltip.tooltip("hide");
 
 			// FADE OUT
 			$("#phraseText").animate({
@@ -287,6 +301,7 @@ function putNextPhrase() {
 
 	} else {
 		$("#playButton").show();
+		tooltip.tooltip("hide");
 	}
 }
 
@@ -339,4 +354,14 @@ function displayEmoji(state) {
 		});
 	});
 
+}
+
+function updateTooltip(text){
+
+	if(text == "passe compose"){
+		text = "passé composé";
+	}
+
+	tooltip.attr("data-original-title",text);
+	tooltip.tooltip("show");
 }
