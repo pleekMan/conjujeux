@@ -26,62 +26,7 @@ var verbs = [
 					"avez été",
 					"ont été"
 				],
-			},
-			{
-				mode: "indicatif",
-				temp: "futur simple",
-				personnes: [
-					"serai",
-					"seras",
-					"sera",
-					"serons",
-					"serez",
-					"seront"
-				],
 			}
-		],
-	},
-	{
-		infinitif: "aller",
-		group: 3,
-		conjugaisons: [
-			{
-				mode: "indicatif",
-				temp: "present",
-				personnes: [
-					"vais",
-					"vas",
-					"va",
-					"allons",
-					"allez",
-					"vont"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "passe compose",
-				// MASCULIN
-				personnes: [
-					"suis allé",
-					"es allé",
-					"est allé",
-					"sommes allé",
-					"êtes allé",
-					"sont allé"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "futur simple",
-				personnes: [
-					"irai",
-					"iras",
-					"ira",
-					"irons",
-					"irez",
-					"iront"
-				],
-			},
 		],
 	},
 	{
@@ -153,32 +98,7 @@ var verbs = [
 					"arrivez",
 					"arrivent"
 				],
-			},
-			{
-				mode: "indicatif",
-				temp: "passe compose",
-				// MASCULIN
-				personnes: [
-					"suis arrivé",
-					"es arrivé",
-					"est arrivé",
-					"sommes arrivé",
-					"êtes arrivé",
-					"sont arrivé"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "futur simple",
-				personnes: [
-					"arriverai",
-					"arriveras",
-					"arrivera",
-					"arriverons",
-					"arriverez",
-					"arriveront"
-				],
-			},
+			}
 		],
 	},
 	{
@@ -208,18 +128,6 @@ var verbs = [
 					"avez mangé",
 					"ont mangé"
 				],
-			},
-			{
-				mode: "indicatif",
-				temp: "futur simple",
-				personnes: [
-					"mangerai",
-					"mangeras",
-					"mangera",
-					"mangerons",
-					"mangerez",
-					"mangeront"
-				],
 			}
 		],
 	},
@@ -243,7 +151,7 @@ var verbs = [
 				mode: "indicatif",
 				temp: "passe compose",
 				personnes: [
-					"ai apporté",
+					"'ai apporté",
 					"as  apporté",
 					"a apporté",
 					"avons apporté",
@@ -267,30 +175,6 @@ var verbs = [
 					"parlons",
 					"parlez",
 					"parlent"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "passe compose",
-				personnes: [
-					"ai parlé",
-					"as parlé",
-					"a parlé",
-					"avons parlé",
-					"avez parlé",
-					"ont parlé"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "futur simple",
-				personnes: [
-					"parlerai",
-					"parleras",
-					"parlera",
-					"parlerons",
-					"parlerez",
-					"parleront"
 				],
 			}
 		],
@@ -393,30 +277,6 @@ var verbs = [
 					"faisons",
 					"faites",
 					"font"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "passe compose",
-				personnes: [
-					"ai fait",
-					"as fait",
-					"a fait",
-					"avons fait",
-					"allez fait",
-					"ont fait"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "futur simple",
-				personnes: [
-					"ferai",
-					"feras",
-					"fera",
-					"ferons",
-					"ferez",
-					"feront"
 				],
 			}
 		],
@@ -594,18 +454,6 @@ var verbs = [
 					"choisisses",
 					"choisissent"
 				],
-			},
-			{
-				mode: "indicatif",
-				temp: "passe compose",
-				personnes: [
-					"ai choisi",
-					"as choisi",
-					"a choisi",
-					"avons choisi",
-					"avez choisi",
-					"ont choisi"
-				],
 			}
 		],
 	},
@@ -750,18 +598,6 @@ var verbs = [
 					"finissez",
 					"finissent"
 				],
-			},
-			{
-				mode: "indicatif",
-				temp: "passe compose",
-				personnes: [
-					"ai fini",
-					"as fini",
-					"a fini",
-					"avons fini",
-					"avez fini",
-					"ont fini"
-				],
 			}
 		],
 	},
@@ -899,205 +735,6 @@ var verbs = [
 					"avons vécu",
 					"avez vécu",
 					"ont vécu"
-				],
-			}
-		],
-	},
-	{
-		infinitif: "fournir",
-		group: 2,
-		conjugaisons: [
-			{
-				mode: "indicatif",
-				temp: "present",
-				personnes: [
-					"fournis",
-					"fournis",
-					"fournit",
-					"fournissons",
-					"fournissez",
-					"fournissent"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "passe compose",
-				personnes: [
-					"ai fourni",
-					"as fourni",
-					"a fourni",
-					"avons fourni",
-					"avez fourni",
-					"ont fourni"
-				],
-			}
-		],
-	},
-	{
-		infinitif: "partir",
-		group: 3,
-		conjugaisons: [
-			{
-				mode: "indicatif",
-				temp: "present",
-				personnes: [
-					"pars",
-					"pars",
-					"part",
-					"partons",
-					"partez",
-					"partent"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "passe compose",
-				// CONJUGATION ETRE: MASCULIN
-				personnes: [
-					"suis parti",
-					"es parti",
-					"est parti",
-					"sommes partis",
-					"êtes partis",
-					"sont partis"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "futur simple",
-				personnes: [
-					"partirai",
-					"partiras",
-					"partira",
-					"partirons",
-					"partirez",
-					"partiront"
-				],
-			}
-		],
-	},
-	{
-		infinitif: "arrêter",
-		group: 1,
-		conjugaisons: [
-			{
-				mode: "indicatif",
-				temp: "present",
-				personnes: [
-					"arrêt",
-					"arrêts",
-					"arrêt",
-					"arrêtons",
-					"arrêtez",
-					"arrêtent"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "passe compose",
-				personnes: [
-					"ai arrêté",
-					"as arrêté",
-					"a arrêté",
-					"avons arrêté",
-					"avez arrêté",
-					"ont arrêté"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "futur simple",
-				personnes: [
-					"arrêterai",
-					"arrêteras",
-					"arrêtera",
-					"arrêterons",
-					"arrêterez",
-					"arrêteront"
-				],
-			}
-		],
-	},
-	{
-		infinitif: "ouvrir",
-		group: 3,
-		conjugaisons: [
-			{
-				mode: "indicatif",
-				temp: "present",
-				personnes: [
-					"ouvre",
-					"ouvres",
-					"ouvre",
-					"ouvrons",
-					"ouvrez",
-					"ouvrent"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "passe compose",
-				personnes: [
-					"ai ouvert",
-					"as ouvert",
-					"a ouvert",
-					"avons ouvert",
-					"avez ouvert",
-					"ont ouvert"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "futur simple",
-				personnes: [
-					"ouvrirai",
-					"ouvriras",
-					"ouvrira",
-					"ouvrirons",
-					"ouvrirez",
-					"ouvriront"
-				],
-			}
-		],
-	},
-	{
-		infinitif: "voir",
-		group: 3,
-		conjugaisons: [
-			{
-				mode: "indicatif",
-				temp: "present",
-				personnes: [
-					"vois",
-					"vois",
-					"voit",
-					"voyons",
-					"voyez",
-					"voient"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "passe compose",
-				personnes: [
-					"ai vu",
-					"as vu",
-					"a vu",
-					"avons vu",
-					"avez vu",
-					"ont vu"
-				],
-			},
-			{
-				mode: "indicatif",
-				temp: "futur simple",
-				personnes: [
-					"verrai",
-					"verras",
-					"verra",
-					"verrons",
-					"verrez",
-					"verront"
 				],
 			}
 		],

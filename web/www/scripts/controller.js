@@ -48,6 +48,9 @@ function bindStuff() {
 	$("#buttonFuturProche").on("mousedown", function () {
 		changeConjugationFilter($(this));
 	});
+	$("#buttonFuturSimple").on("mousedown", function () {
+		changeConjugationFilter($(this));
+	});
 
 	// SET UP TOOLTIP
 	$('[data-toggle="tooltip"]').tooltip();
@@ -144,7 +147,7 @@ function selectPhrasesByFilter(conjugationFilter) {
 	//var setSelection = generateRandomNonRepeatableNums(preSelection.length, preSelection.length);
 
 	// SHUFFLE SELECTION
-	var shuffled = shuffle(preSelection);
+	var shuffled = shuffle(preSelection); // ONLY NEED TO PASS preSelection.length
 	//console.log("-| Shuffled: " + shuffled);
 
 	// TRIM THE FIRST {phraseCount} ELEMENTS

@@ -610,7 +610,790 @@ var phrases = [
       temp: "passe compose",
       personne: 5
    },
-
+   {
+      phrase: "Tu as oublié de nettoyer la maison",
+      infinitif: "oublier",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 2
+   },
+   {
+      phrase: "Vous avez dû de l'argent à vos amis.",
+      infinitif: "devoir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 5
+   },
+   {
+      phrase: "J'ai dû de l'argent à mes amis.",
+      infinitif: "devoir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 1
+   },
+   {
+      phrase: "Tu as dû de l'argent à tes amis.",
+      infinitif: "devoir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 2
+   },
+   {
+      phrase: "Il a dû de l'argent à ses amis.",
+      infinitif: "devoir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 3
+   },
+   {
+      phrase: "J'ai perdu mon temps en attendant le dentist.",
+      infinitif: "perdre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 1
+   },
+   {
+      phrase: "Tu as perdu ton temps en attendant le dentist.",
+      infinitif: "perdre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 2
+   },
+   {
+      phrase: "Elle a perdu son temps en attendant le dentist.",
+      infinitif: "perdre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 3
+   },
+   {
+      phrase: "Nous avons perdu nos temps en attendant le dentist.",
+      infinitif: "perdre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 4
+   },
+   {
+      phrase: "Vous avez perdu vos temps en attendant le dentist.",
+      infinitif: "perdre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 5
+   },
+   {
+      phrase: "Ils ont perdu ses temps en attendant le dentist.",
+      infinitif: "perdre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 6
+   },
+   {
+      phrase: "Vous avez été une très jolie jeune femme.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 5
+   },
+   {
+      phrase: "J'ai été une très jolie jeune femme.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 1
+   },
+   {
+      phrase: "Tu as été une très jolie jeune femme.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 2
+   },
+   {
+      phrase: "Nous avons été des très jolies jeunes femmes.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 4
+   },
+   {
+      phrase: "Elle as été une très jolie jeune femme.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 3
+   },
+   {
+      phrase: "Elles ont été des très jolies jeunes femmes.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 6
+   },
+   {
+      phrase: "J'ai promis de dire la vérité.",
+      infinitif: "promettre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 1
+   },
+   {
+      phrase: "Tu as promis de dire la vérité.",
+      infinitif: "promettre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 2
+   },
+   {
+      phrase: "Il a promis de dire la vérité.",
+      infinitif: "promettre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 3
+   },
+   {
+      phrase: "Nous avons promis de dire la vérité.",
+      infinitif: "promettre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 4
+   },
+   {
+      phrase: "Vous avez promis de dire la vérité.",
+      infinitif: "promettre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 5
+   },
+   {
+      phrase: "Elles ont promis de dire la vérité.",
+      infinitif: "promettre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 6
+   },
+   {
+      phrase: "J'ai envoyé un message à mes amis.",
+      infinitif: "envoyer",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 1
+   },
+   {
+      phrase: "Tu as envoyé un message à tes amis.",
+      infinitif: "envoyer",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 2
+   },
+   {
+      phrase: "Il a envoyé un message à ses amis.",
+      infinitif: "envoyer",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 3
+   },
+   {
+      phrase: "Nous avons envoyé un message à nos amis.",
+      infinitif: "envoyer",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 4
+   },
+   {
+      phrase: "Vous avez envoyé un message à vos amis.",
+      infinitif: "envoyer",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 5
+   },
+   {
+      phrase: "Elles ont envoyé un message à ses amis.",
+      infinitif: "envoyer",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 6
+   },
+   {
+      phrase: "J'ai vécu au Canada.",
+      infinitif: "vivre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 1
+   },
+   {
+      phrase: "Tu as vécu au Canada.",
+      infinitif: "vivre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 2
+   },
+   {
+      phrase: "Elle a vécu au Canada.",
+      infinitif: "vivre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 3
+   },
+   {
+      phrase: "Nous avons vécu au Canada.",
+      infinitif: "vivre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 4
+   },
+   {
+      phrase: "Vous avez vécu au Canada.",
+      infinitif: "vivre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 5
+   },
+   {
+      phrase: "Ils ont vécu au Canada.",
+      infinitif: "vivre",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 1
+   },
+   {
+      phrase: "J'ai fini mes devoirs et je suis sorti jouer.",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 1
+   },
+   {
+      phrase: "Tu as fini tes devoirs et tu es sorti jouer.",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 2
+   },
+   {
+      phrase: "Elle as fini ses devoirs et elle est sortie jouer.",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 3
+   },
+   {
+      phrase: "Nous avons fini nos devoirs et nous sommes sortis jouer.",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 4
+   },
+   {
+      phrase: "Vous avez fini vos devoirs et vous êtes sortis jouer.",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 5
+   },
+   {
+      phrase: "Elles ont fini leurs devoirs et ils sont sortis jouer.",
+      infinitif: "finir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 6
+   },
+   {
+      phrase: "J'ai fourni toutes les pièces pour mon dossier.",
+      infinitif: "fournir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 1
+   },
+   {
+      phrase: "Tu as fourni toutes les pièces pour mon dossier.",
+      infinitif: "fournir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 2
+   },
+   {
+      phrase: "Il a fourni toutes les pièces pour se dossier.",
+      infinitif: "fournir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 3
+   },
+   {
+      phrase: "Vous avez fourni toutes les pièces pour vous dossier.",
+      infinitif: "fournir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 5
+   },
+   {
+      phrase: "Nous avons fourni toutes les pièces pour nos dossier.",
+      infinitif: "fournir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 4
+   },
+   {
+      phrase: "J'ai choisi mes vêtements pour aller au marché.",
+      infinitif: "choisir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 1
+   },
+   {
+      phrase: "Tu as choisi tes vêtements pour aller au marché.",
+      infinitif: "choisir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 2
+   },
+   {
+      phrase: "Il a choisi ses vêtements pour aller au marché.",
+      infinitif: "choisir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 3
+   },
+   {
+      phrase: "Nous avons choisi mes vêtements pour aller au marché.",
+      infinitif: "choisir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 4
+   },
+   {
+      phrase: "Vous avez choisi mes vêtements pour aller au marché.",
+      infinitif: "choisir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 5
+   },
+   {
+      phrase: "Ils ont choisi mes vêtements pour aller au marché.",
+      infinitif: "choisir",
+      mode: "indicatif",
+      temp: "passe compose",
+      personne: 6
+   },
+   {
+      phrase: "La semaine prochaine je partirai en Anglaterre.",
+      infinitif: "partir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 1
+   },
+   {
+      phrase: "La semaine prochaine tu partiras en Anglaterre.",
+      infinitif: "partir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 2
+   },
+   {
+      phrase: "La semaine prochaine il partira en Anglaterre.",
+      infinitif: "partir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 3
+   },
+   {
+      phrase: "La semaine prochaine nous partirons en Anglaterre.",
+      infinitif: "partir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 4
+   },
+   {
+      phrase: "La semaine prochaine vous partirez en Anglaterre.",
+      infinitif: "partir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 5
+   },
+   {
+      phrase: "La semaine prochaine ils partiront en Anglaterre.",
+      infinitif: "partir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 6
+   },
+   {
+      phrase: "Je arrêterai de prendre le métro tous le jours.",
+      infinitif: "arrêter",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 1
+   },
+   {
+      phrase: "Tu arrêteras de prendre le métro tous le jours.",
+      infinitif: "arrêter",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 2
+   },
+   {
+      phrase: "Elle arrêtera de prendre le métro tous le jours.",
+      infinitif: "arrêter",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 3
+   },
+   {
+      phrase: "Nous arrêterons de prendre le métro tous le jours.",
+      infinitif: "arrêter",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 4
+   },
+   {
+      phrase: "Vous arrêterez de prendre le métro tous le jours.",
+      infinitif: "arrêter",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 5
+   },
+   {
+      phrase: "Elles arrêteront de prendre le métro tous le jours.",
+      infinitif: "arrêter",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 6
+   },
+   {
+      phrase: "Je parlerai des langues étrangèrs.",
+      infinitif: "parler",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 1
+   },
+   {
+      phrase: "Tu parleras des langues étrangèrs.",
+      infinitif: "parler",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 2
+   },
+   {
+      phrase: "Il parlera des langues étrangèrs.",
+      infinitif: "parler",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 3
+   },
+   {
+      phrase: "Nous parlerons des langues étrangèrs.",
+      infinitif: "parler",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 4
+   },
+   {
+      phrase: "Vous parlerez des langues étrangèrs.",
+      infinitif: "parler",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 5
+   },
+   {
+      phrase: "Elles parleront des langues étrangèrs.",
+      infinitif: "parler",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 6
+   },
+   {
+      phrase: "Je mangerai des bons produits.",
+      infinitif: "manger",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 1
+   },
+   {
+      phrase: "Tu mangeras des bons produits.",
+      infinitif: "manger",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 2
+   },
+   {
+      phrase: "Il mangera des bons produits.",
+      infinitif: "manger",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 3
+   },
+   {
+      phrase: "Nous mangerons des bons produits.",
+      infinitif: "manger",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 4
+   },
+   {
+      phrase: "Vous mangerez des bons produits.",
+      infinitif: "manger",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 5
+   },
+   {
+      phrase: "Ils mangeront des bons produits.",
+      infinitif: "manger",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 6
+   },
+   {
+      phrase: "Je ouvrirai les fênetres quand je arriverai.",
+      infinitif: "ouvrir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 1
+   },
+   {
+      phrase: "Tu ouvriras les fênetres quand tu arriveras.",
+      infinitif: "ouvrir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 2
+   },
+   {
+      phrase: "Elle ouvrira les fênetres quand elle arrivera.",
+      infinitif: "ouvrir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 3
+   },
+   {
+      phrase: "Nous ouvrirons les fênetres quand nous arriverons.",
+      infinitif: "ouvrir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 4
+   },
+   {
+      phrase: "Vous ouvrirez les fênetres quand nous arriverez.",
+      infinitif: "ouvrir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 5
+   },
+   {
+      phrase: "Elles ouvriront les fênetres quand elles arriveront.",
+      infinitif: "ouvrir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 6
+   },
+   {
+      phrase: "Je ouvrirai les fênetres quand je arriverai.",
+      infinitif: "arriver",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 1
+   },
+   {
+      phrase: "Tu ouvriras les fênetres quand tu arriveras.",
+      infinitif: "arriver",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 2
+   },
+   {
+      phrase: "Elle ouvrira les fênetres quand elle arrivera.",
+      infinitif: "arriver",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 3
+   },
+   {
+      phrase: "Nous ouvrirons les fênetres quand nous arriverons.",
+      infinitif: "arriver",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 4
+   },
+   {
+      phrase: "Vous ouvrirez les fênetres quand nous arriverez.",
+      infinitif: "arriver",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 5
+   },
+   {
+      phrase: "Elles ouvriront les fênetres quand elles arriveront.",
+      infinitif: "arriver",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 6
+   },
+   {
+      phrase: "Je irai au marché et tu feras les courses.",
+      infinitif: "aller",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 1
+   },
+   {
+      phrase: "Tu iras au marché et tu feras les courses.",
+      infinitif: "aller",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 2
+   },
+   {
+      phrase: "Il ira au marché et il fera les courses.",
+      infinitif: "aller",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 3
+   },
+   {
+      phrase: "Nous irons au marché et nous ferons les courses.",
+      infinitif: "aller",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 4
+   },
+   {
+      phrase: "Vous irez au marché et vous ferez les courses.",
+      infinitif: "aller",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 5
+   },
+   {
+      phrase: "Elles iront au marché et elles feront les courses.",
+      infinitif: "aller",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 6
+   },
+   {
+      phrase: "Je irai au marché et tu ferai les courses.",
+      infinitif: "faire",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 1
+   },
+   {
+      phrase: "Tu iras au marché et tu feras les courses.",
+      infinitif: "faire",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 2
+   },
+   {
+      phrase: "Il ira au marché et il fera les courses.",
+      infinitif: "faire",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 3
+   },
+   {
+      phrase: "Nous irons au marché et nous ferons les courses.",
+      infinitif: "faire",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 4
+   },
+   {
+      phrase: "Vous irez au marché et vous ferez les courses.",
+      infinitif: "faire",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 5
+   },
+   {
+      phrase: "Elles iront au marché et elles feront les courses.",
+      infinitif: "faire",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 6
+   },
+   {
+      phrase: "Quand je serai parti, tu ne me verras plus.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 1
+   },
+   {
+      phrase: "Quand tu seras parti, je ne te verrai plus.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 2
+   },
+   {
+      phrase: "Quand il sera parti, je ne le verrai plus.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 3
+   },
+   {
+      phrase: "Quand nous serons parti, tu ne nos verras plus.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 4
+   },
+   {
+      phrase: "Quand vous serez parti, je ne les verrai plus.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 5
+   },
+   {
+      phrase: "Quand ils seront parti, je ne les verrai plus.",
+      infinitif: "être",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 6
+   },
+   {
+      phrase: "Quand tu seras parti, je ne te verrai plus.",
+      infinitif: "voir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 1
+   },
+   {
+      phrase: "Quand je serai parti, tu ne me verras plus.",
+      infinitif: "voir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 2
+   },
+   {
+      phrase: "Quand tu seras parti, il ne te verra plus.",
+      infinitif: "voir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 3
+   },
+   {
+      phrase: "Quand tu seras parti, nous ne te verrons plus.",
+      infinitif: "voir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 4
+   },
+   {
+      phrase: "Quand je serai parti, vous ne me verrez plus.",
+      infinitif: "voir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 5
+   },
+   {
+      phrase: "Quand je serai parti, ils ne me verront plus.",
+      infinitif: "voir",
+      mode: "indicatif",
+      temp: "futur simple",
+      personne: 6
+   },
 ]
 
 
