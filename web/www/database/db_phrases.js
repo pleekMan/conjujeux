@@ -853,7 +853,7 @@ var phrases = [
       infinitif: "vivre",
       mode: "indicatif",
       temp: "passe compose",
-      personne: 1
+      personne: 6
    },
    {
       phrase: "J'ai fini mes devoirs et je suis sorti jouer.",
@@ -1269,7 +1269,7 @@ var phrases = [
       personne: 6
    },
    {
-      phrase: "Je irai au marché et tu ferai les courses.",
+      phrase: "Je irai au marché et je ferai les courses.",
       infinitif: "faire",
       mode: "indicatif",
       temp: "futur simple",
