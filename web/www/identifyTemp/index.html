@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap&subset=latin-ext"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.bundle.min.js"></script> -->
+
+	<!-- <script src="js/jqueryUI/jquery-ui.js"></script> -->
+	<!-- //<link rel="stylesheet" href="js/jqueryUI/jquery-ui.css"> -->
+
+	<script type="text/javascript" src="database/db_verbs.js"></script>
+	<script type="text/javascript" src="database/db_phrases.js"></script>
+	<script type="text/javascript" src="scripts/controller.js"></script>
+
+
+</head>
+
+<body>
+	<!-- 
+	<ul id="emojisCorrectList">
+		<li>&#x1F601;</li>
+		<li>&#x1F600;</li>
+		<li>&#x1F609;</li>
+		<li>&#x1F61D;</li>
+		<li>&#x1F913;</li>
+		<li>&#x1F638;</li>
+		<li>&#x1F63D;</li>
+		<li>&#x1F48B;</li>
+		<li>&#x1F4AF;</li>
+		<li>&#x1F44C;</li>
+		<li>&#x1F918;</li>
+		<li>&#x1F44D;</li>
+	</ul>
+	<ul id="emojisIncorrectList">
+		<li>&#x1F914;</li>
+		<li>&#x1F644;</li>
+		<li>&#x1F915;</li>
+		<li>&#x1F616;</li>
+		<li>&#x2620;</li>
+		<li>&#x1F4A9;</li>
+		<li>&#x1F640;</li>
+		<li>&#x1F63F;</li>
+		<li>&#x1F64A;</li>
+		<li>&#x1F4A3;</li>
+
+	</ul>
+
+	<nav class="navbar navbar-default fixed-top" role="navigation">
+		<div class="navbar-collapse">
+			<div class="navbar-center text-center" id="introText">Saisissez la conjugaison correcte. Si vous ne savez pas, saisissez " ? ".
+			</br> Choisissez les filtres du Temps.
+			</div>
+			<ul class="nav navbar-nav navbar-center">
+				<li class="filterButton buttonOff" id="buttonPasseComposse" data-db_code="passe compose">Passé Composé</li>
+				<li class="filterButton buttonOn" id="buttonPresent" data-db_code="present">Present</li>
+				<li class="filterButton buttonOff" id="buttonFuturSimple" data-db_code="futur simple">Futur Simple</li>
+
+			</ul>
+
+			<div class="nav navbar-nav navbar-center" id="scoreContainer">
+				<div id="scoreText">0</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="fixed-top" id="emojiContainer"></div>
+
+	<div class="fixed-top" id="scoreContainer">
+		<div class="rounded-circle scoreButton" id="playButton">&#x25B6;</div>
+	</div>
+
+	<div class="container fixed-top text-center" id="progressBarContainer">
+		<div class="progress">
+			<div class="progress-bar bg-info" id="progressBar" role="progressbar" style="width: 1%" aria-valuenow="0"
+				aria-valuemin="0" aria-valuemax="10">
+			</div>
+		</div>
+	</div>
+ -->
+	<div id="tempsDisponibles">
+		<ul>
+			<li>IMPARFAIT</li>
+			<li>PASSE COMPOSE</li>
+		</ul>
+	</div>
+
+	<div class="container vertical-center">
+		<div class="row justify-content-md-center">
+
+			<!-- SIDE SPACING -->
+			<div class="col">
+				&nbsp;
+			</div>
+
+			<!-- PHRASE CONTAINER -->
+			<div class="col-md-auto" id="phraseContainer">
+				<div class="d-inline" id="phraseText">
+					<!-- <span id="preVerbTextBox">Avant le verb</span> -->
+					<!-- <span id="tooltipSpan" data-toggle="tooltip" data-placement="top" data-original-title="QueTemp"
+						data-trigger="manual">
+						<input id="verbTextBox" data-infinitif="verb" data-conjugated="verb" placeholder="verb" type="text">
+					</span> -->
+					<!-- <span id="postVerbTextBox">apres le verb.</span> -->
+					<p>La semaine dernière je <span id="verb" data-tippy-content="passe composé">suis allé</span> au
+						restaurant avec mes amis. Il <span id="verb">avait</span> beaucoup de monde mais j'<span
+							id="verb">étais</span> contente de être avec mes amis. Nous <span id="verb">avons regardé</span> le
+						menu et nous <span id="verb">avons commandé</span> une paëlla.</p>
+				</div>
+			</div>
+
+
+			<!-- SIDE SPACING -->
+			<div class="col">
+				&nbsp;
+			</div>
+
+		</div>
+	</div>
+
+	<footer>
+		<div class="footer text-center">Développé par
+			<a target="blank" href="https://www.pleek.net"> www.pleek.net</a>
+			avec beaucoup d’affection, pour mon professeur Corinne Nitharum et les étudiants DUEF A2 - 2019 de l’Université
+			de La Rochelle.
+		</div>
+
+	</footer>
+
+	<script src="https://unpkg.com/popper.js@1"></script>
+	<script src="https://unpkg.com/tippy.js@5"></script>
+
+
+</body>
