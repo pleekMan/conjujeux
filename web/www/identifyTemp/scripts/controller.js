@@ -8,14 +8,18 @@ var phraseCount = 20;
 var atPhrase = 0;
 var score = 0;
 
-var tooltip;
+var tooltip; // DELETE, THIS IS THE OLD TOOLTIP LIB
+
+var currentParagraphData;
+var activeVerb = -1;
+var userResponses = [];
 
 //console.log(allPhrases);
 
 $(document).ready(function () {
 
 	bindStuff();
-	//reStart();
+	reStart();
 
 
 });
@@ -36,48 +40,7 @@ function bindStuff() {
 
 
 
-	var tempList = document.getElementById("tempsDisponibles").innerHTML;
 
-	// tempList.each(function(){
-	// 	$(this).bind("click"), function(){
-	// 		console.log($(this).html())
-	// 	}
-	// });
-
-	var verbSlots = $("#phraseText").find("span");
-	verbSlots.each(function () {
-		//$(this).css("color", "var(--color-deux)");
-		// console.log("-");
-		// console.log($(this).html());
-		// $(this).addClass("verbWord-unselected");
-
-
-		// BIND TO tippy TOOLTIP SYSTEM
-		// get(0) PULLS THE NATIVE DOM ELEMENT FROM THE JQUERY ELEMENT (required by Tippy)
-		// tippy STUFF IS LINKED ON THE HTML, AT THE BOTTOM 
-		tippy($(this).get(0), {
-			arrow: true,
-			allowHTML: true,
-			interactive: true,
-			// content: document.getElementById("tempsDisponibles")
-			content: tempList
-		});
-
-		// HOVER IN-OUT ACTIONS
-		$(this).mouseenter(function (e) {
-			console.log("hover");
-			$(this).removeClass("verbWord-unselected");
-			$(this).addClass("verbWord-selected");
-		}).mouseleave(function (e) {
-			$(this).removeClass("verbWord-selected");
-			$(this).addClass("verbWord-unselected");
-		});
-
-	});
-
-	// SET UP TOOLTIP
-	$('[data-toggle="tooltip"]').tooltip();
-	tooltip = $("#tooltipSpan");
 
 
 
@@ -85,33 +48,65 @@ function bindStuff() {
 
 function reStart() {
 	buildParagraph(0);
+	bindTooltips();
 
 	$("#playButton").hide();
 	fadeInPhrase();
 }
 
-function chooseTemp(tempNum) {
-	console.log(tempNum);
+function chooseTemp(whichTemp) {
+	console.log(whichTemp);
+
+	var whichTempToString = "-";
+
+	switch (whichTemp) {
+		case 0:
+			whichTempToString = "imparfait";
+			break;
+		case 1:
+			whichTempToString = "passe composse";
+			break;
+		case 2:
+			whichTempToString = "future proche";
+			break;
+		case 3:
+			whichTempToString = "future simple";
+			break;
+		default:
+			whichTempToString = "-";
+			break;
+	}
+
+	userResponses[activeVerb] = whichTempToString;
+
+	var verbSlots = $("#phraseText").find("span");
+
+	// UPDATE THE TOOLTIP CONTENT TO SHOW THE SELECTED OPTION
+	$(verbSlots[activeVerb]).get(0)._tippy.setContent(whichTempToString);
+	$(verbSlots[activeVerb]).get(0)._tippy.show();
+	//$(verbSlots[activeVerb]).get(0)._tippy.setProps({interactive:true});
+	$(verbSlots[activeVerb]).get(0)._tippy.enable();
 }
 
 function buildParagraph(which) {
 
-	var paragraphData = paragraphs[0];
+	currentParagraphData = paragraphs[which];
+
 
 	// SLICING ALL VERB AND NON-VERB PORTIONS FROM PARAGRAPH TO ADD TO A LIST
 	var paragraphSlicing = [];
 	var lastFirstIndex = 0;
-	for (let i = 0; i < paragraphData.verbs.length; i++) {
-		const verbData = paragraphData.verbs[i];
+	for (let i = 0; i < currentParagraphData.verbs.length; i++) {
+		const verbData = currentParagraphData.verbs[i];
 
 		// VERB START-END
-		var verbStartIndex = paragraphData.paragraph.indexOf(verbData.verb);
+		var verbStartIndex = currentParagraphData.paragraph.indexOf(verbData.verb);
 		var verbEndIndex = verbStartIndex + verbData.verb.length;
 
 		// GET WHATEVER THERE IS UNTIL THE VERB
-		var nonVerbPhrase = paragraphData.paragraph.slice(lastFirstIndex, verbStartIndex);
+		var nonVerbPhrase = currentParagraphData.paragraph.slice(lastFirstIndex, verbStartIndex);
 		// GET THE VERB
-		var verbPhrase = paragraphData.paragraph.slice(verbStartIndex, verbEndIndex);
+		var verbPhrase = currentParagraphData.paragraph.slice(verbStartIndex, verbEndIndex);
 		lastFirstIndex = verbEndIndex; // UPDATE NEXT NON-VERB INDEX START
 
 		// ADD TO LIST
@@ -120,16 +115,19 @@ function buildParagraph(which) {
 
 		console.log(i + " : " + nonVerbPhrase);
 		console.log(i + " : " + verbPhrase);
+
+		// ALSO, ADD DEFAULT VALUES TO RESPONSES ARRAY
+		userResponses.push("-");
 	}
 
 	// GET THE TAILING WORDS: EITHER ANOTHER PHRASE OR "."
-	if(lastFirstIndex <= paragraphData.paragraph.length){
-		var tailPhrase = paragraphData.paragraph.slice(lastFirstIndex);
+	if (lastFirstIndex <= currentParagraphData.paragraph.length) {
+		var tailPhrase = currentParagraphData.paragraph.slice(lastFirstIndex);
 		paragraphSlicing.push(tailPhrase);
 		console.log("TailPhrase : " + tailPhrase);
 	}
 
-	console.log("Original Paragraph: " + paragraphData.paragraph);
+	console.log("Original Paragraph: " + currentParagraphData.paragraph);
 
 	console.log(paragraphSlicing);
 
@@ -144,22 +142,22 @@ function buildParagraph(which) {
 
 		// CHECK IF IT IS A VERB
 		let isVerb = false;
-		for (let j = 0; j < paragraphData.verbs.length; j++) {
-			if(currentPhrase.indexOf(paragraphData.verbs[j].verb) >= 0){
+		for (let j = 0; j < currentParagraphData.verbs.length; j++) {
+			if (currentPhrase.indexOf(currentParagraphData.verbs[j].verb) >= 0) {
 				isVerb = true;
 				break;
 			}
 		}
-		
-		if (isVerb) {
-			 // surround with tags
-			 let pre = "<span id='verb' data-position='" + verbIndexInParagraph + "'>";
-			 let post = "</span>"
-			 htmlParagraph += pre;
-			 htmlParagraph += currentPhrase;
-			 htmlParagraph += post;
 
-			 verbIndexInParagraph++;
+		if (isVerb) {
+			// surround with tags
+			let pre = "<span id='verb' data-position='" + verbIndexInParagraph + "'>";
+			let post = "</span>"
+			htmlParagraph += pre;
+			htmlParagraph += currentPhrase;
+			htmlParagraph += post;
+
+			verbIndexInParagraph++;
 
 		} else {
 			// simply add currentPhrase to htmlParagraph
@@ -170,9 +168,58 @@ function buildParagraph(which) {
 	htmlParagraph += "</p>" // CLOSE PARAGRAPH
 
 	console.log(htmlParagraph);
-	
+
+	// finaly add the HTMLize paragraph to the DOM
 	$("#phraseText").html(htmlParagraph);
-	
+
+
+}
+
+function bindTooltips() {
+
+	var tempList = document.getElementById("tempsDisponibles").innerHTML;
+
+	// tempList.each(function(){
+	// 	$(this).bind("click"), function(){
+	// 		console.log($(this).html())
+	// 	}
+	// });
+
+	var verbSlots = $("#phraseText").find("span");
+	verbSlots.each(function () {
+
+		// BIND TO tippy TOOLTIP SYSTEM
+		// get(0) PULLS THE NATIVE DOM ELEMENT FROM THE JQUERY ELEMENT (required by Tippy)
+		// tippy STUFF IS LINKED ON THE HTML, AT THE BOTTOM
+		$(this).data("tippy-content", "-")
+
+		tippy($(this).get(0), {
+			arrow: true,
+			allowHTML: true,
+			interactive: true,
+			// content: document.getElementById("tempsDisponibles")
+			content: tempList
+		});
+
+		// HOVER IN-OUT ACTIONS
+		$(this).mouseenter(function (e) {
+			//console.log("hover");
+			$(this).removeClass("verbWord-unselected");
+			$(this).addClass("verbWord-selected");
+
+			// SET activeVerb from html data-position
+			activeVerb = $(this).data("position");
+
+		}).mouseleave(function (e) {
+			$(this).removeClass("verbWord-selected");
+			$(this).addClass("verbWord-unselected");
+
+
+			// $(this).get(0)._tippy.setContent("HOLAAAAAA");
+			// $(this).get(0)._tippy.show();
+		});
+
+	});
 
 }
 /*

@@ -18,6 +18,10 @@ a {
 	color: var(--color-deux);
 }
 
+a:hover{
+	color: var(--color-une);
+}
+
 ul {
 	list-style-type: none;
 	margin: 0;
