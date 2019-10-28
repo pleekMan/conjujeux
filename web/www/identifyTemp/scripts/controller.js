@@ -3,12 +3,6 @@
 
 // all IS THE WHOLE DB
 // xxSet ARE THE SET OF PHRASES AND VERBS THAT ARE BEING USED CURRENTLY (A SET OF 10, FOR EXAMPLE)
-var allPhrases = phrases;
-var phraseSet;
-var allVerbs = verbs;
-var verbSet;
-
-var selectedConjugationFilters = ["present"];
 
 var phraseCount = 20;
 var atPhrase = 0;
@@ -43,7 +37,7 @@ function bindStuff() {
 
 
 	var tempList = document.getElementById("tempsDisponibles").innerHTML;
-	
+
 	// tempList.each(function(){
 	// 	$(this).bind("click"), function(){
 	// 		console.log($(this).html())
@@ -51,7 +45,7 @@ function bindStuff() {
 	// });
 
 	var verbSlots = $("#phraseText").find("span");
-	verbSlots.each(function()  {
+	verbSlots.each(function () {
 		//$(this).css("color", "var(--color-deux)");
 		// console.log("-");
 		// console.log($(this).html());
@@ -70,11 +64,11 @@ function bindStuff() {
 		});
 
 		// HOVER IN-OUT ACTIONS
-		$(this).mouseenter( function(e) {
+		$(this).mouseenter(function (e) {
 			console.log("hover");
 			$(this).removeClass("verbWord-unselected");
 			$(this).addClass("verbWord-selected");
-		}).mouseleave(function(e){
+		}).mouseleave(function (e) {
 			$(this).removeClass("verbWord-selected");
 			$(this).addClass("verbWord-unselected");
 		});
@@ -84,18 +78,104 @@ function bindStuff() {
 	// SET UP TOOLTIP
 	$('[data-toggle="tooltip"]').tooltip();
 	tooltip = $("#tooltipSpan");
-	
+
 
 
 }
 
 function reStart() {
-	buildCurrentSet(phraseCount);
+	buildParagraph(0);
 
 	$("#playButton").hide();
 	fadeInPhrase();
 }
 
+function chooseTemp(tempNum) {
+	console.log(tempNum);
+}
+
+function buildParagraph(which) {
+
+	var paragraphData = paragraphs[0];
+
+	// SLICING ALL VERB AND NON-VERB PORTIONS FROM PARAGRAPH TO ADD TO A LIST
+	var paragraphSlicing = [];
+	var lastFirstIndex = 0;
+	for (let i = 0; i < paragraphData.verbs.length; i++) {
+		const verbData = paragraphData.verbs[i];
+
+		// VERB START-END
+		var verbStartIndex = paragraphData.paragraph.indexOf(verbData.verb);
+		var verbEndIndex = verbStartIndex + verbData.verb.length;
+
+		// GET WHATEVER THERE IS UNTIL THE VERB
+		var nonVerbPhrase = paragraphData.paragraph.slice(lastFirstIndex, verbStartIndex);
+		// GET THE VERB
+		var verbPhrase = paragraphData.paragraph.slice(verbStartIndex, verbEndIndex);
+		lastFirstIndex = verbEndIndex; // UPDATE NEXT NON-VERB INDEX START
+
+		// ADD TO LIST
+		paragraphSlicing.push(nonVerbPhrase);
+		paragraphSlicing.push(verbPhrase);
+
+		console.log(i + " : " + nonVerbPhrase);
+		console.log(i + " : " + verbPhrase);
+	}
+
+	// GET THE TAILING WORDS: EITHER ANOTHER PHRASE OR "."
+	if(lastFirstIndex <= paragraphData.paragraph.length){
+		var tailPhrase = paragraphData.paragraph.slice(lastFirstIndex);
+		paragraphSlicing.push(tailPhrase);
+		console.log("TailPhrase : " + tailPhrase);
+	}
+
+	console.log("Original Paragraph: " + paragraphData.paragraph);
+
+	console.log(paragraphSlicing);
+
+	//-------------
+
+	// NOW LETS WRAP THE VERBS WITH HTML TAGS
+
+	var htmlParagraph = "<p>"; // OPEN PARAGRAPH
+	var verbIndexInParagraph = 0;
+	for (let i = 0; i < paragraphSlicing.length; i++) {
+		const currentPhrase = paragraphSlicing[i];
+
+		// CHECK IF IT IS A VERB
+		let isVerb = false;
+		for (let j = 0; j < paragraphData.verbs.length; j++) {
+			if(currentPhrase.indexOf(paragraphData.verbs[j].verb) >= 0){
+				isVerb = true;
+				break;
+			}
+		}
+		
+		if (isVerb) {
+			 // surround with tags
+			 let pre = "<span id='verb' data-position='" + verbIndexInParagraph + "'>";
+			 let post = "</span>"
+			 htmlParagraph += pre;
+			 htmlParagraph += currentPhrase;
+			 htmlParagraph += post;
+
+			 verbIndexInParagraph++;
+
+		} else {
+			// simply add currentPhrase to htmlParagraph
+			htmlParagraph += currentPhrase;
+		}
+	}
+
+	htmlParagraph += "</p>" // CLOSE PARAGRAPH
+
+	console.log(htmlParagraph);
+	
+	$("#phraseText").html(htmlParagraph);
+	
+
+}
+/*
 function buildCurrentSet(count) {
 
 	phraseSet = [];
@@ -148,6 +228,7 @@ function buildCurrentSet(count) {
 
 
 }
+*/
 
 function selectPhrasesByFilter(conjugationFilter) {
 
@@ -388,12 +469,12 @@ function displayEmoji(state) {
 
 }
 
-function updateTooltip(text){
+function updateTooltip(text) {
 
-	if(text == "passe compose"){
+	if (text == "passe compose") {
 		text = "passé composé";
 	}
 
-	tooltip.attr("data-original-title",text);
+	tooltip.attr("data-original-title", text);
 	tooltip.tooltip("show");
 }

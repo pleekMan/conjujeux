@@ -14,6 +14,16 @@ body {
 	background-color: var(--color-back);
 }
 
+a {
+	color: var(--color-deux);
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
 .col {
 	/* background-color: cadetblue; */
 }
@@ -23,7 +33,7 @@ body {
 	/* color: thistle */
 }
 
-#introText{
+#introText {
 	padding: 10px 0 5px 0;
 	/* background-color: var(--color-deux); */
 	color: var(--color-cinq);
@@ -47,7 +57,6 @@ body {
 	padding: 5px;
 	cursor: pointer;
 }
-
 
 .vertical-center {
 	min-height: 100%;
@@ -110,11 +119,11 @@ body {
 	outline: none;
 }
 
-.verbWord-selected{
+.verbWord-selected {
 	color: var(--color-deux);
 }
 
-.verbWord-unselected{
+.verbWord-unselected {
 	color: var(--color-troix);
 }
 
@@ -201,18 +210,16 @@ body {
 	padding: 10px;
 	font-size: 15px;
 	font-family: 'Open Sans Condensed', sans-serif;
-
 }
 
 /* Tooltip on top */
+
 .tooltip.top>.tooltip.arrow {
 	/* border-top: 5px solid var(--color-une); */
-	
 	/* border-top-color: #8656f7; */
 	/* background-color: var(--color-une); */
 	/* color: var(--color-une); */
 	/* background-color: 5px solid var(--color-une); */
-
 }
 
 .tooltip.top>.tooltip.arrow {
@@ -221,18 +228,20 @@ body {
 	border-top-color: #8656f7;
 }
 
-
 /* Tooltip on bottom */
+
 .tooltip.bottom>.tooltip-arrow {
 	/* border-bottom: 5px solid blue; */
 }
 
 /* Tooltip on left */
+
 .tooltip.left>.tooltip-arrow {
 	/* border-left: 5px solid red; */
 }
 
 /* Tooltip on right */
+
 .tooltip.right>.tooltip-arrow {
 	/* border-right: 5px solid black; */
 }

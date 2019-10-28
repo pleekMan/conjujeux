@@ -19,8 +19,7 @@
 	<!-- <script src="js/jqueryUI/jquery-ui.js"></script> -->
 	<!-- //<link rel="stylesheet" href="js/jqueryUI/jquery-ui.css"> -->
 
-	<script type="text/javascript" src="database/db_verbs.js"></script>
-	<script type="text/javascript" src="database/db_phrases.js"></script>
+	<script type="text/javascript" src="database/db_paragraphs.js"></script>
 	<script type="text/javascript" src="scripts/controller.js"></script>
 
 
@@ -90,8 +89,10 @@
  -->
 	<div id="tempsDisponibles">
 		<ul>
-			<li>IMPARFAIT</li>
-			<li>PASSE COMPOSE</li>
+			<a href=javascript:chooseTemp(0);><li>Imparfait</li></a>
+			<a href=javascript:chooseTemp(1);><li>Passé Composé</li></a>
+			<a href=javascript:chooseTemp(2);><li>Futur Proche</li></a>
+			<a href=javascript:chooseTemp(3);><li>Futur Simple</li></a>
 		</ul>
 	</div>
 
@@ -112,10 +113,12 @@
 						<input id="verbTextBox" data-infinitif="verb" data-conjugated="verb" placeholder="verb" type="text">
 					</span> -->
 					<!-- <span id="postVerbTextBox">apres le verb.</span> -->
-					<p>La semaine dernière je <span id="verb" data-tippy-content="passe composé">suis allé</span> au
+
+					<!-- <p>La semaine dernière je <span id="verb">suis allé</span> au
 						restaurant avec mes amis. Il <span id="verb">avait</span> beaucoup de monde mais j'<span
 							id="verb">étais</span> contente de être avec mes amis. Nous <span id="verb">avons regardé</span> le
-						menu et nous <span id="verb">avons commandé</span> une paëlla.</p>
+						menu et nous <span id="verb">avons commandé</span> une paëlla.</p> -->
+						
 				</div>
 			</div>
 
