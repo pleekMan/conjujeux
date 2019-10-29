@@ -10,6 +10,8 @@ var score = 0;
 
 var tooltip; // DELETE, THIS IS THE OLD TOOLTIP LIB
 
+var tempList;
+
 var currentParagraphData;
 var activeVerb = -1;
 var userResponses = [];
@@ -18,13 +20,13 @@ var userResponses = [];
 
 $(document).ready(function () {
 
-	bindStuff();
+	bindGlobalStuff();
 	reStart();
 
 
 });
 
-function bindStuff() {
+function bindGlobalStuff() {
 
 	// PRESSING THE ENTER KEY ON TEXTBOX
 	$("#verbTextBox").on('keypress', function (e) {
@@ -38,10 +40,9 @@ function bindStuff() {
 	// 	reStart();
 	// });
 
-
-
-
-
+	// GET RAW TEMPS LIST (WITH FUNCTION CALLS) TO LATER MODIFY AND INJECT
+	// WHEN USER SELECTS SOMETHING
+	tempList = document.getElementById("tempsDisponibles").innerHTML;
 
 
 }
@@ -77,15 +78,22 @@ function chooseTemp(whichTemp) {
 			break;
 	}
 
+	// SAVE USER RESPONSE
 	userResponses[activeVerb] = whichTempToString;
 
-	var verbSlots = $("#phraseText").find("span");
+	// BASED ON RAW tempList, MODIFY THE li TO REFLECT SELECTION
+	var tempHighlighted = $(tempList);
+	tempHighlighted.find("li").eq(whichTemp).css({"background-color":"#748282"});
 
 	// UPDATE THE TOOLTIP CONTENT TO SHOW THE SELECTED OPTION
-	$(verbSlots[activeVerb]).get(0)._tippy.setContent(whichTempToString);
-	$(verbSlots[activeVerb]).get(0)._tippy.show();
-	//$(verbSlots[activeVerb]).get(0)._tippy.setProps({interactive:true});
-	$(verbSlots[activeVerb]).get(0)._tippy.enable();
+	var verbSlots = $("#phraseText").find("span");
+	var toolTipRegularDOM = $(verbSlots[activeVerb]).get(0);
+	toolTipRegularDOM._tippy.setContent(tempHighlighted.get(0));
+	//toolTipRegularDOM._tippy.setProps({ interactive: true });
+	//toolTipRegularDOM._tippy.enable();
+	// toolTipRegularDOM._tippy.show();
+
+
 }
 
 function buildParagraph(which) {
@@ -124,10 +132,10 @@ function buildParagraph(which) {
 	if (lastFirstIndex <= currentParagraphData.paragraph.length) {
 		var tailPhrase = currentParagraphData.paragraph.slice(lastFirstIndex);
 		paragraphSlicing.push(tailPhrase);
-		console.log("TailPhrase : " + tailPhrase);
+		//console.log("TailPhrase : " + tailPhrase);
 	}
 
-	console.log("Original Paragraph: " + currentParagraphData.paragraph);
+	//console.log("Original Paragraph: " + currentParagraphData.paragraph);
 
 	console.log(paragraphSlicing);
 
@@ -177,7 +185,7 @@ function buildParagraph(which) {
 
 function bindTooltips() {
 
-	var tempList = document.getElementById("tempsDisponibles").innerHTML;
+	//var tempList = document.getElementById("tempsDisponibles").innerHTML;
 
 	// tempList.each(function(){
 	// 	$(this).bind("click"), function(){
