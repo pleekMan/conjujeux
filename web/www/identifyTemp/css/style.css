@@ -37,6 +37,7 @@ ul {
 }
 
 li {
+	color: var(--color-cinq);
 	padding-left: 3px;
 	padding-right: 3px;
 }
@@ -73,6 +74,23 @@ li {
 	margin: 10px;
 	padding: 5px;
 	cursor: pointer;
+}
+
+.buttonOn {
+	background-color: var(--color-deux);
+	color: var(--color-cinq);
+	border: 1px;
+	border-style: solid;
+	border-radius: 3px;
+}
+
+.buttonOff {
+	background-color: var(--color-back);
+	color: dimgray;
+	border: 1px;
+	border-style: solid;
+	border-color: dimgray;
+	border-radius: 3px;
 }
 
 .vertical-center {
@@ -120,7 +138,7 @@ li {
 	/* FUNCA, PERO NO ES LO QUE QUIERO. ME PA QUE TENGO QUE AJUSTAR A DIV  */
 	font-size: 3vmax;
 	color: var(--color-troix);
-	margin-top: 25%;
+	margin-top: 15%;
 }
 
 #verbTextBox {
@@ -155,7 +173,7 @@ li {
 }
 
 #progressBarContainer {
-	margin-top: 120px;
+	margin-top: 100px;
 	height: 10px;
 }
 

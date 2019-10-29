@@ -54,21 +54,21 @@
 		<li>&#x1F4A3;</li>
 
 	</ul>
-
+-->
 	<nav class="navbar navbar-default fixed-top" role="navigation">
 		<div class="navbar-collapse">
-			<div class="navbar-center text-center" id="introText">Saisissez la conjugaison correcte. Si vous ne savez pas, saisissez " ? ".
-			</br> Choisissez les filtres du Temps.
+			<div class="navbar-center text-center" id="introText">Retrouvez les verbs et indiquez leurs temps.
 			</div>
 			<ul class="nav navbar-nav navbar-center">
-				<li class="filterButton buttonOff" id="buttonPasseComposse" data-db_code="passe compose">Passé Composé</li>
+				<li class="filterButton buttonOff" id="buttonImparfait" data-db_code="imparfait">Imparfait</li>
+				<li class="filterButton buttonOff" id="buttonPasseCompose" data-db_code="passe compose">Passé Composé</li>
 				<li class="filterButton buttonOn" id="buttonPresent" data-db_code="present">Present</li>
+				<li class="filterButton buttonOff" id="buttonFuturProche" data-db_code="futur proche">Futur Simple</li>
 				<li class="filterButton buttonOff" id="buttonFuturSimple" data-db_code="futur simple">Futur Simple</li>
-
 			</ul>
 
 			<div class="nav navbar-nav navbar-center" id="scoreContainer">
-				<div id="scoreText">0</div>
+				<div id="scoreText">&nbsp;</div>
 			</div>
 		</div>
 	</nav>
@@ -86,13 +86,24 @@
 			</div>
 		</div>
 	</div>
- -->
-	<div id="tempsDisponibles">
+
+	<div id="tempsDisponibles" hidden>
 		<ul>
-			<li><a href=javascript:chooseTemp(0);>Imparfait</a></li>
-			<li><a href=javascript:chooseTemp(1);>Passé Composé</a></li>
-			<li><a href=javascript:chooseTemp(2);>Futur Proche</a></li>
-			<li><a href=javascript:chooseTemp(3);>Futur Simple</a></li>
+			<a href=javascript:chooseTemp(0);>
+				<li>Imparfait</li>
+			</a>
+			<a href=javascript:chooseTemp(1);>
+				<li>Passé Composé</li>
+			</a>
+			<a href=javascript:chooseTemp(2);>
+				<li>Present</li>
+			</a>
+			<a href=javascript:chooseTemp(3);>
+				<li>Futur Proche</li>
+			</a>
+			<a href=javascript:chooseTemp(4);>
+				<li>Futur Simple</li>
+			</a>
 		</ul>
 	</div>
 
@@ -107,18 +118,7 @@
 			<!-- PHRASE CONTAINER -->
 			<div class="col-md-auto" id="phraseContainer">
 				<div class="d-inline" id="phraseText">
-					<!-- <span id="preVerbTextBox">Avant le verb</span> -->
-					<!-- <span id="tooltipSpan" data-toggle="tooltip" data-placement="top" data-original-title="QueTemp"
-						data-trigger="manual">
-						<input id="verbTextBox" data-infinitif="verb" data-conjugated="verb" placeholder="verb" type="text">
-					</span> -->
-					<!-- <span id="postVerbTextBox">apres le verb.</span> -->
-
-					<!-- <p>La semaine dernière je <span id="verb">suis allé</span> au
-						restaurant avec mes amis. Il <span id="verb">avait</span> beaucoup de monde mais j'<span
-							id="verb">étais</span> contente de être avec mes amis. Nous <span id="verb">avons regardé</span> le
-						menu et nous <span id="verb">avons commandé</span> une paëlla.</p> -->
-
+					<p></p>
 				</div>
 			</div>
 

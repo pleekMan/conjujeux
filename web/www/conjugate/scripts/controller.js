@@ -42,7 +42,7 @@ function bindStuff() {
 	$("#buttonPresent").on("mousedown", function () {
 		changeConjugationFilter($(this));
 	});
-	$("#buttonPasseComposse").on("mousedown", function () {
+	$("#buttonPasseCompose").on("mousedown", function () {
 		changeConjugationFilter($(this));
 	});
 	$("#buttonFuturProche").on("mousedown", function () {

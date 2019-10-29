@@ -4,14 +4,15 @@
 // all IS THE WHOLE DB
 // xxSet ARE THE SET OF PHRASES AND VERBS THAT ARE BEING USED CURRENTLY (A SET OF 10, FOR EXAMPLE)
 
-var phraseCount = 20;
-var atPhrase = 0;
-var score = 0;
+//var phraseCount = 20;
+//var atPhrase = 0;
+//var score = 0;
 
 var tooltip; // DELETE, THIS IS THE OLD TOOLTIP LIB
 
-var tempList;
+var selectedConjugationFilters = ["present"];
 
+var tempList;
 var currentParagraphData;
 var activeVerb = -1;
 var userResponses = [];
@@ -29,16 +30,34 @@ $(document).ready(function () {
 function bindGlobalStuff() {
 
 	// PRESSING THE ENTER KEY ON TEXTBOX
+	/*
 	$("#verbTextBox").on('keypress', function (e) {
 		//console.log("something pressed");
 		if (e.which === 13) { // 13 = enter KEY
 			checkAnswer();
 		}
 	});
+	*/
 
-	// $("#playButton").on("mousedown", function () {
-	// 	reStart();
-	// });
+	$("#playButton").on("mousedown", function () {
+		reStart();
+	});
+
+	$("#buttonImparfait").on("mousedown", function () {
+		changeConjugationFilter($(this));
+	});
+	$("#buttonPasseCompose").on("mousedown", function () {
+		changeConjugationFilter($(this));
+	});
+	$("#buttonPresent").on("mousedown", function () {
+		changeConjugationFilter($(this));
+	});
+	$("#buttonFuturProche").on("mousedown", function () {
+		changeConjugationFilter($(this));
+	});
+	$("#buttonFuturSimple").on("mousedown", function () {
+		changeConjugationFilter($(this));
+	});
 
 	// GET RAW TEMPS LIST (WITH FUNCTION CALLS) TO LATER MODIFY AND INJECT
 	// WHEN USER SELECTS SOMETHING
@@ -48,59 +67,77 @@ function bindGlobalStuff() {
 }
 
 function reStart() {
-	buildParagraph(0);
+
+	buildParagraph(selectParagraphByFilter());
 	bindTooltips();
+	updateProgressBar(0,userResponses.length);
 
 	$("#playButton").hide();
-	fadeInPhrase();
 }
 
-function chooseTemp(whichTemp) {
-	console.log(whichTemp);
+function selectParagraphByFilter() {
 
-	var whichTempToString = "-";
+	var allParagraphs = paragraphs;
 
-	switch (whichTemp) {
-		case 0:
-			whichTempToString = "imparfait";
-			break;
-		case 1:
-			whichTempToString = "passe composse";
-			break;
-		case 2:
-			whichTempToString = "future proche";
-			break;
-		case 3:
-			whichTempToString = "future simple";
-			break;
-		default:
-			whichTempToString = "-";
-			break;
+	// preSelect only the paragraphs that have verbs temps within the global filters
+	var filteredParagraphs = [];
+	for (let i = 0; i < allParagraphs.length; i++) {
+		const thisVerbs = allParagraphs[i].verbs;
+
+		// FOR ALL VERBS IN PARAGRAPH
+		paragraphLoop:
+		for (let j = 0; j < thisVerbs.length; j++) {
+			// FOR ALL SELECTED TEMP FILTERS
+			for (let k = 0; k < selectedConjugationFilters.length; k++) {
+				// IF IT FINDS MATCHING TEMPS, ADD THE PARAGRAPH TO filteredParagraphs
+				if (thisVerbs[j].temp == selectedConjugationFilters[k]) {
+					filteredParagraphs.push(allParagraphs[i]);
+					break paragraphLoop;
+				}
+			}
+		}
 	}
 
-	// SAVE USER RESPONSE
-	userResponses[activeVerb] = whichTempToString;
+	console.log(filteredParagraphs);
 
-	// BASED ON RAW tempList, MODIFY THE li TO REFLECT SELECTION
-	var tempHighlighted = $(tempList);
-	tempHighlighted.find("li").eq(whichTemp).css({"background-color":"#748282"});
+	let rand = Math.floor(Math.random() * filteredParagraphs.length);
 
-	// UPDATE THE TOOLTIP CONTENT TO SHOW THE SELECTED OPTION
-	var verbSlots = $("#phraseText").find("span");
-	var toolTipRegularDOM = $(verbSlots[activeVerb]).get(0);
-	toolTipRegularDOM._tippy.setContent(tempHighlighted.get(0));
-	//toolTipRegularDOM._tippy.setProps({ interactive: true });
-	//toolTipRegularDOM._tippy.enable();
-	// toolTipRegularDOM._tippy.show();
+	//TODO: need to work on this a little bit more
+	// let finalFilter = removeNonSelectedTempsFromParagraph(filteredParagraphs[rand]);
 
+	return filteredParagraphs[rand];
 
 }
 
-function buildParagraph(which) {
+function removeNonSelectedTempsFromParagraph(paragraph) {
 
-	currentParagraphData = paragraphs[which];
+	//FIXME:
+	var paragraphCopy = JSON.parse(JSON.stringify(paragraph));
+	for (let i = 0; i < paragraphCopy.verbs.length; i++) {
 
+		var thisTemp = paragraphCopy.verbs[i].temp;
+		var exist = false;
 
+		for (let j = 0; j < selectedConjugationFilters.length; j++) {
+			if (thisTemp == selectedConjugationFilters[j]) {
+				exist = true;
+				break;
+			}
+		}
+
+		if (!exist) {
+
+		}
+
+	}
+
+}
+
+function buildParagraph(paragraph) {
+
+	//currentParagraphData = paragraphs[which];
+	currentParagraphData = paragraph;
+	userResponses = [];
 	// SLICING ALL VERB AND NON-VERB PORTIONS FROM PARAGRAPH TO ADD TO A LIST
 	var paragraphSlicing = [];
 	var lastFirstIndex = 0;
@@ -121,8 +158,8 @@ function buildParagraph(which) {
 		paragraphSlicing.push(nonVerbPhrase);
 		paragraphSlicing.push(verbPhrase);
 
-		console.log(i + " : " + nonVerbPhrase);
-		console.log(i + " : " + verbPhrase);
+		//console.log(i + " : " + nonVerbPhrase);
+		//console.log(i + " : " + verbPhrase);
 
 		// ALSO, ADD DEFAULT VALUES TO RESPONSES ARRAY
 		userResponses.push("-");
@@ -137,13 +174,14 @@ function buildParagraph(which) {
 
 	//console.log("Original Paragraph: " + currentParagraphData.paragraph);
 
-	console.log(paragraphSlicing);
+	//console.log(paragraphSlicing);
 
 	//-------------
 
 	// NOW LETS WRAP THE VERBS WITH HTML TAGS
 
 	var htmlParagraph = "<p>"; // OPEN PARAGRAPH
+	//var htmlParagraph = "";
 	var verbIndexInParagraph = 0;
 	for (let i = 0; i < paragraphSlicing.length; i++) {
 		const currentPhrase = paragraphSlicing[i];
@@ -175,11 +213,16 @@ function buildParagraph(which) {
 
 	htmlParagraph += "</p>" // CLOSE PARAGRAPH
 
-	console.log(htmlParagraph);
-
-	// finaly add the HTMLize paragraph to the DOM
 	$("#phraseText").html(htmlParagraph);
 
+	//console.log(htmlParagraph);
+
+	// FADE OUT/IN PARAGRAPHS (A <p> should be the first-child of #phraseText)
+	// var text = $("#phraseText:first-child")
+	// text.fadeOut(500, function () {
+	// 	text.html(htmlParagraph);
+	// 	text.fadeIn(500)
+	// });
 
 }
 
@@ -285,70 +328,6 @@ function buildCurrentSet(count) {
 }
 */
 
-function selectPhrasesByFilter(conjugationFilter) {
-
-	// PRESELECT (by index (store the index, not the object) ) ALL THAT MATCH THE FILTERS
-	// APRES, WE WILL SELECT A BUNCH ONLY
-
-	var preSelection = [];
-	for (let i = 0; i < allPhrases.length; i++) {
-		const currentPhrase = allPhrases[i];
-
-		for (let j = 0; j < conjugationFilter.length; j++) {
-			const currentFilter = conjugationFilter[j];
-
-			if (currentPhrase.temp == currentFilter) {
-				//console.log(currentPhrase);
-				preSelection.push(i);
-				break;
-			}
-		}
-	}
-	//console.log("-| PreSelection: " + preSelection);
-
-
-	// NOW, WE SELECT A BUNCH
-	//var setSelection = generateRandomNonRepeatableNums(phraseCount, preSelection.length);
-	//var setSelection = generateRandomNonRepeatableNums(preSelection.length, preSelection.length);
-
-	// SHUFFLE SELECTION
-	var shuffled = shuffle(preSelection); // ONLY NEED TO PASS preSelection.length
-	//console.log("-| Shuffled: " + shuffled);
-
-	// TRIM THE FIRST {phraseCount} ELEMENTS
-	var trimed = shuffled.slice(0, phraseCount);
-	//console.log("-| Trimmed: " + trimed);
-
-	// USE THE SHUFFLED INDEXES TO ADD THE PHRASES TO phraseSet
-	for (let i = 0; i < trimed.length; i++) {
-		phraseSet.push(allPhrases[trimed[i]]);
-	}
-	//console.log(phraseSet);
-
-
-	// DONE
-
-}
-
-function shuffle(array) {
-	// Fisher-Yates (aka Knuth) Shuffle algorithm
-	var currentIndex = array.length, temporaryValue, randomIndex;
-
-	// While there remain elements to shuffle...
-	while (0 !== currentIndex) {
-
-		// Pick a remaining element...
-		randomIndex = Math.floor(Math.random() * currentIndex);
-		currentIndex -= 1;
-
-		// And swap it with the current element.
-		temporaryValue = array[currentIndex];
-		array[currentIndex] = array[randomIndex];
-		array[randomIndex] = temporaryValue;
-	}
-
-	return array;
-}
 
 function changeConjugationFilter(whichButton) {
 	let filterInButton = whichButton.attr("data-db_code");
@@ -379,83 +358,99 @@ function changeConjugationFilter(whichButton) {
 	//console.log(selectedConjugationFilters);
 
 	//buildCurrentSet(phraseCount);
-	reStart(phraseCount);
+	reStart();
 	//$("#playButton").hide();
 
 
 }
 
 
+function chooseTemp(whichTemp) {
+	console.log(whichTemp);
 
-function putPhrase(whichPhrase) {
+	var whichTempToString = "-";
 
-	// GET PHRASE TO WORK ON
-	var phraseData = phraseSet[whichPhrase];
-	var verbData = verbSet[whichPhrase];
+	switch (whichTemp) {
+		case 0:
+			whichTempToString = "imparfait";
+			break;
+		case 1:
+			whichTempToString = "passe compose";
+			break;
+		case 2:
+			whichTempToString = "present";
+			break;
+		case 3:
+			whichTempToString = "futur proche";
+			break;
+		case 4:
+			whichTempToString = "futur simple";
+			break;
+		default:
+			whichTempToString = "-";
+			break;
+	}
 
-	// GET VERB DATA
-	// AND SPLITTING THE PHRASE ACCORDING TO THE SEARCHED CONJUGATION
-	var whichConjugation = phraseData.personne - 1; // ARRAY LOCATION
-	var conjugatedVerb = verbData.personnes[whichConjugation];
-	var splittedPhrase = phraseData.phrase.split(conjugatedVerb);
-	//console.log(splittedPhrase);
+	// SAVE USER RESPONSE
+	userResponses[activeVerb] = whichTempToString;
 
-	// GET JQUERY OBJECTS
-	var preVerb = $("#preVerbTextBox");
-	var postVerb = $("#postVerbTextBox");
-	var verbBox = $("#verbTextBox");
+	// BASED ON RAW tempList, MODIFY THE li TO REFLECT SELECTION
+	var tempHighlighted = $(tempList);
+	tempHighlighted.find("li").eq(whichTemp).css({ "background-color": "#748282" });
 
-	// SET VIEWPORT
-	preVerb.text(splittedPhrase[0]);
-	postVerb.text(splittedPhrase[1]);
-	verbBox.attr("data-infinitif", phraseData.infinitif);
-	verbBox.attr("data-conjugated", conjugatedVerb);
-	verbBox.attr("placeHolder", phraseData.infinitif);
-	verbBox.val("");
+	// UPDATE THE TOOLTIP CONTENT TO SHOW THE SELECTED OPTION
+	var verbSlots = $("#phraseText").find("span");
+	var toolTipRegularDOM = $(verbSlots[activeVerb]).get(0);
+	toolTipRegularDOM._tippy.setContent(tempHighlighted.get(0));
+	//toolTipRegularDOM._tippy.setProps({ interactive: true });
+	//toolTipRegularDOM._tippy.enable();
+	// toolTipRegularDOM._tippy.show();
 
-	// TOOLTIP
-	updateTooltip(phraseData.temp)
-
-
+	updateProgress();
 }
 
-function checkAnswer() {
-	var verbBox = $("#verbTextBox");
+function checkAnswers() {
 
-	if (verbBox.val() == "?") {
-		// IF NOT KNOW, TYPE "?" TO GET THE ANSWER
-		verbBox.val(verbBox.attr("data-conjugated"));
-		score--;
-	} else {
-		// COMPARING DATA STORED IN ELEMENT
-		if (verbBox.val().toLowerCase() == verbBox.attr("data-conjugated")) {
-			// CORRECT..!!
+	var score = 0;
+	for (let i = 0; i < currentParagraphData.verbs.length; i++) {
+		if (currentParagraphData.verbs[i].temp == userResponses[i]) {
 			score++;
-			console.log("Score: " + score);
-
-			displayEmoji("correct");
-
-			// TOOLTIP
-			tooltip.tooltip("hide");
-
-			// FADE OUT
-			$("#phraseText").animate({
-				opacity: 0.0,
-				//left: "+=50",
-				//height: "toggle"
-			}, 500, function () {
-				putNextPhrase();
-			});
-		} else {
-			// INCORRECT
-
-			//DISPLAY FUNNY EMOJI
-			displayEmoji("incorrect");
-
 		}
 	}
+
+	$("#scoreText").text(score + " bonnes réponses sur " + userResponses.length + " ( " + Math.ceil((score / userResponses.length) * 100) + "% )");
+
+	console.log("Score: " + score);
+
+	showResultsOnText();
+
 }
 
+function showResultsOnText() {
+
+	var verbSlots = $("#phraseText").find("span");
+
+	// COLOR HIGHLIGHT THE IN/CORRECT ANSWERS
+	for (let i = 0; i < userResponses.length; i++) {
+
+		if (userResponses[i] == currentParagraphData.verbs[i].temp) {
+			verbSlots.eq(i).css({ "color": "green" });
+		} else {
+			verbSlots.eq(i).css({ "color": "red" });
+		}
+
+		// CHANGE CONTENT OF TOOLTIPS TO SHOW CORRECT ANSWERS
+		var toolTipRegularDOM = $(verbSlots[i]).get(0);
+		toolTipRegularDOM._tippy.setContent(currentParagraphData.verbs[i].temp);
+		toolTipRegularDOM._tippy.show();
+	}
+
+
+	$("#playButton").fadeIn(500);
+
+}
+
+/*
 function putNextPhrase() {
 
 	atPhrase++;
@@ -481,11 +476,31 @@ function fadeInPhrase() {
 		//height: "toggle"
 	}, 500);
 }
+*/
 
-function updateProgressBar(phraseNum) {
-	$("#progressBar").attr("style", "width:" + (((phraseNum + 1) / phraseCount) * 100) + "%")
-	$("#scoreText").text(score + " bonnes réponses sur " + atPhrase);
+function updateProgress() {
+
+	// CHECK WHICH ONES WERE ANSWERED. "-" MEANS NO ANSWER
+	let answered = 0;
+	for (let i = 0; i < userResponses.length; i++) {
+		if (userResponses[i] != "-") {
+			answered++;
+		}
+	}
+
+	updateProgressBar(answered, userResponses.length);
+
+	// IF FINISHED
+	if (answered == userResponses.length) {
+		checkAnswers();
+	}
 }
+function updateProgressBar(progress, total) {
+
+	$("#progressBar").attr("style", "width:" + (((progress) / total) * 100) + "%")
+}
+
+
 
 function generateRandomNonRepeatableNums(count, max) {
 	var random = [];
