@@ -61,6 +61,9 @@ function bindGlobalStuff() {
 	$("#buttonFuturSimple").on("mousedown", function () {
 		changeConjugationFilter($(this));
 	});
+	$("#buttonReStart").on("mousedown", function () {
+		reStart();
+	});
 
 	// GET RAW TEMPS LIST (WITH FUNCTION CALLS) TO LATER MODIFY AND INJECT
 	// WHEN USER SELECTS SOMETHING

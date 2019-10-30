@@ -1,31 +1,32 @@
 /* MENU BUTTON STYLING - BEGIN */
+
 /* NEEDS TO BE INSIDE NAVBAR CONTAINER */
-#menuContainer{
+
+#menuContainer {
 	position: fixed !important;
 	top: 25px;
 	left: 25px;
 }
 
-#menuButton{
+#menuButton {
 	border-radius: 30px;
-	background-color:var(--color-quatre);
-
+	background-color: var(--color-quatre);
 }
 
-#menuDropDown{
+#menuDropDown {
 	background: none;
 	border: none;
 }
 
-.dropdown-item{
+.dropdown-item {
 	/* OVERRIDE/ADD TO BOOSTRAP */
-	background-color:var(--color-cinq);
+	background-color: var(--color-cinq);
 	color: var(--color-quatre) !important;
 	border-radius: 30px;
 	margin: 10px;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
 	margin: 10px;
 	background-color: var(--color-une);
 	color: var(--color-cinq);
@@ -34,8 +35,13 @@
 .caret-off::before {
 	display: none;
 }
+
 .caret-off::after {
 	display: none;
 }
 
 /* MENU BUTTON STYLING - END */
+
+#buttonReStart {
+	background-color: var(--color-troix);
+}

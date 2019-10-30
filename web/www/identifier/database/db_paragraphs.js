@@ -9,59 +9,173 @@ var paragraphs = [
       paragraph: "La semaine dernière je suis allé au restaurant avec mes amis. Il avait beaucoup de monde mais j'étais contente de être avec mes amis. Nous avons regardé le menu et nous avons commandé une paëlla.",
       verbs: [
          {
-            verb:"suis allé",
+            verb: "suis allé",
             temp: "passe compose"
          },
          {
-            verb:"avait",
+            verb: "avait",
             temp: "imparfait"
          },
          {
-            verb:"étais",
+            verb: "étais",
             temp: "imparfait"
          },
          {
-            verb:"avons regardé",
+            verb: "avons regardé",
             temp: "passe compose"
          },
          {
-            verb:"avons commandé",
+            verb: "avons commandé",
             temp: "passe compose"
          }
       ]
    },
    //------------
    {
-      paragraph: " 2 --- La semaine dernière je suis allé au restaurant avec mes amis. Il avait beaucoup de monde mais j'étais contente de être avec mes amis. Nous avons regardé le menu et nous avons commandé une paëlla.",
+      paragraph: "Quand j’étais lycéen, je voulais être politicien. J’étudiais tous les jours parce que je devais, pour cela, être accepté dans une grande école. Je lisais les journaux régulièrement, et, un soir, quand j’ai parlé de l’actualité pendant un dîner, j’ai impressionné tout le monde.",
       verbs: [
          {
-            verb:"suis allé",
+            verb: "étais",
+            temp: "imparfait"
+         },
+         {
+            verb: "voulais",
+            temp: "imparfait"
+         },
+         {
+            verb: "étudiais",
+            temp: "imparfait"
+         },
+         {
+            verb: "devais",
+            temp: "imparfait"
+         },
+         {
+            verb: "être accepté",
+            temp: "present"
+         },
+         {
+            verb: "lisais",
+            temp: "imparfait"
+         },
+         {
+            verb: "ai parlé",
             temp: "passe compose"
          },
          {
-            verb:"avait",
+            verb: "ai impressionné",
+            temp: "passe compose"
+         },
+      ]
+   },
+   //------------
+   {
+      paragraph: "Je pense que je vais aller a la Bibliothéque. Là, je verrai s'il y a de la place.",
+      verbs: [
+         {
+            verb: "pense",
+            temp: "present"
+         },
+         {
+            verb: "vais aller",
+            temp: "futur proche"
+         },
+         {
+            verb: "verrai",
+            temp: "futur simple"
+         },
+      ]
+   },
+   //------------
+   {
+      paragraph: "La nourriture était bon et il y avait une bonne odeur de chorizo. Nous avons mangé, discuté et puis nous sommes rentrés vers 23h parce que nous étions fatigué.",
+      verbs: [
+         {
+            verb: "était",
+            temp: "imparfait"
+         },
+         {
+            verb: "avait",
+            temp: "imparfait"
+         },
+         {
+            verb: "avons mangé",
+            temp: "passe compose"
+         },
+         {
+            verb: "discuté",
+            temp: "passe compose"
+         },
+         {
+            verb:"sommes rentré",
+            temp: "passe compose"
+         },
+         {
+            verb:"étions",
             temp: "imparfait"
          },
       ]
    },
       //------------
       {
-         paragraph: "Je pense. Je vais aller a la Bibliothéque. Là, je verrai s'il y a de la place.",
+         paragraph: "Nous venons de déménager. Nous sommes très contents de notre nouvel appartement. C'est beaucoup plus lumineux et spacieux que notre premiere maison, qui était trop sombré! Vous devez venir le visiter. On va organiser la pendaison de crémaillère le 5 juillet et on espère tous vous voir !",
          verbs: [
             {
-               verb:"pense",
+               verb: "venons",
                temp: "present"
             },
             {
-               verb:"vais aller",
-               temp: "futur proche"
+               verb: "sommes",
+               temp: "present"
             },
             {
-               verb:"verrai",
-               temp: "futur simple"
+               verb: "est",
+               temp: "present"
+            },
+            {
+               verb:"était",
+               temp: "imparfait"
+            },
+            {
+               verb: "devez",
+               temp: "present"
+            },
+            {
+               verb:"va organiser",
+               temp: "passe compose"
             },
          ]
       },
+            //------------
+            {
+               paragraph: "Samedi prochain, la place Masséna sera en fête à l’occasion de la journée de clôture de la 23e opération Pièces jaunes. L’an dernier, 1.2 tonne de pièces ont été récoltées à Nice. Cette action, qui contribue à améliorer la qualité de vie des enfants et des adolescents hospitalisés, est parrainée par l’ex-footballeur Christian Karembeu et par la chanteuse Lorie. Tous deux seront présents samedi, aux côtés de la présidente de la fondation. Maurice Alberti, ambassadeur de l’opération, fait le point pour Direct Matin édition Côte d’Azur sur cette action de solidarité.",
+               verbs: [
+                  {
+                     verb: "sera",
+                     temp: "futur simple"
+                  },
+                  {
+                     verb: "ont été",
+                     temp: "passe compose"
+                  },
+                  {
+                     verb: "contribue",
+                     temp: "present"
+                  },
+                  {
+                     verb: "est parrainé",
+                     temp: "present"
+                  },
+                  {
+                     verb: "seront",
+                     temp: "futur simple"
+                  },
+                  {
+                     verb: "fait",
+                     temp: "present"
+                  },
+               ]
+            },
 ]
 
 

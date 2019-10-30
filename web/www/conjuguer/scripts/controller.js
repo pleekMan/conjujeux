@@ -51,6 +51,10 @@ function bindStuff() {
 	$("#buttonFuturSimple").on("mousedown", function () {
 		changeConjugationFilter($(this));
 	});
+	$("#buttonReStart").on("mousedown", function () {
+		reStart();
+	});
+
 
 	// SET UP TOOLTIP
 	$('[data-toggle="tooltip"]').tooltip();

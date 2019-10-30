@@ -212,12 +212,6 @@ li {
 	font-size: 20px;
 }
 
-#playButton {
-	background-color: var(--color-quatre);
-	cursor: -webkit-grab;
-	cursor: grab;
-	margin-top: 100px;
-}
 
 /* .footer{
 	 EXTENDES BOOTSTRAP
