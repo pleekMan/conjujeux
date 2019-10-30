@@ -29,6 +29,9 @@ $(document).ready(function () {
 
 function bindGlobalStuff() {
 
+
+	// $('.dropdown-toggle').dropdown();
+
 	// PRESSING THE ENTER KEY ON TEXTBOX
 	/*
 	$("#verbTextBox").on('keypress', function (e) {

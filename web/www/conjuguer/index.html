@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../_global/style/menuStyle.css">
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
@@ -19,14 +21,15 @@
 	<!-- <script src="js/jqueryUI/jquery-ui.js"></script> -->
 	<!-- //<link rel="stylesheet" href="js/jqueryUI/jquery-ui.css"> -->
 
-	<script type="text/javascript" src="database/db_paragraphs.js"></script>
+	<script type="text/javascript" src="database/db_verbs.js"></script>
+	<script type="text/javascript" src="database/db_phrases.js"></script>
 	<script type="text/javascript" src="scripts/controller.js"></script>
 
 
 </head>
 
 <body>
-	<!-- 
+
 	<ul id="emojisCorrectList">
 		<li>&#x1F601;</li>
 		<li>&#x1F600;</li>
@@ -54,24 +57,48 @@
 		<li>&#x1F4A3;</li>
 
 	</ul>
--->
+
+	<!-- MENU, NAV BAR, FILTERS & SCORE  -->
 	<nav class="navbar navbar-default fixed-top" role="navigation">
+
+		<!-- MENU (NEEDS TO BE INSIDE NAV BAR, OTHERWISE NAVBAR BLOCKS CLICKING)-->
+		<div id="menuContainer">
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle caret-off" type="button" id="menuButton"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					&#10036;
+				</button>
+				<div class="dropdown-menu" id="menuDropDown" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="../conjugate/index.html">Écrivez le verb</a>
+					<a class="dropdown-item" href="../identifyTemp/index.html">Identifiez le temp</a>
+				</div>
+			</div>
+		</div>
+
 		<div class="navbar-collapse">
-			<div class="navbar-center text-center" id="introText">Retrouvez les verbs et indiquez leurs temps.
+			<div class="navbar-center text-center" id="introText">Saisissez la conjugaison correcte. Si vous ne savez pas,
+				saisissez " ? ".
+				</br> Choisissez les filtres du Temps.
 			</div>
 			<ul class="nav navbar-nav navbar-center">
-				<li class="filterButton buttonOff" id="buttonImparfait" data-db_code="imparfait">Imparfait</li>
 				<li class="filterButton buttonOff" id="buttonPasseCompose" data-db_code="passe compose">Passé Composé</li>
 				<li class="filterButton buttonOn" id="buttonPresent" data-db_code="present">Present</li>
-				<li class="filterButton buttonOff" id="buttonFuturProche" data-db_code="futur proche">Futur Simple</li>
+				<!-- <li class="filterButton buttonOff" id="buttonFuturProche" data-db_code="futur proche">Futur Proche</li> -->
 				<li class="filterButton buttonOff" id="buttonFuturSimple" data-db_code="futur simple">Futur Simple</li>
+
 			</ul>
 
 			<div class="nav navbar-nav navbar-center" id="scoreContainer">
-				<div id="scoreText">&nbsp;</div>
+				<!-- <div class="rounded-circle scoreButton" id="scoreText">0</div> -->
+				<div id="scoreText">0</div>
 			</div>
 		</div>
 	</nav>
+
+
+	<!-- <div class="fixed-top" id="scoreContainer">
+		<div id="scoreText">0</div>
+	</div> -->
 
 	<div class="fixed-top" id="emojiContainer"></div>
 
@@ -87,25 +114,6 @@
 		</div>
 	</div>
 
-	<div id="tempsDisponibles" hidden>
-		<ul>
-			<a href=javascript:chooseTemp(0);>
-				<li>Imparfait</li>
-			</a>
-			<a href=javascript:chooseTemp(1);>
-				<li>Passé Composé</li>
-			</a>
-			<a href=javascript:chooseTemp(2);>
-				<li>Present</li>
-			</a>
-			<a href=javascript:chooseTemp(3);>
-				<li>Futur Proche</li>
-			</a>
-			<a href=javascript:chooseTemp(4);>
-				<li>Futur Simple</li>
-			</a>
-		</ul>
-	</div>
 
 	<div class="container vertical-center">
 		<div class="row justify-content-md-center">
@@ -118,7 +126,12 @@
 			<!-- PHRASE CONTAINER -->
 			<div class="col-md-auto" id="phraseContainer">
 				<div class="d-inline" id="phraseText">
-					<p></p>
+					<span id="preVerbTextBox">Avant le verb</span>
+					<span id="tooltipSpan" data-toggle="tooltip" data-placement="top" data-original-title="QueTemp"
+						data-trigger="manual">
+						<input id="verbTextBox" data-infinitif="verb" data-conjugated="verb" placeholder="verb" type="text">
+					</span>
+					<span id="postVerbTextBox">apres le verb.</span>
 				</div>
 			</div>
 
@@ -139,9 +152,5 @@
 		</div>
 
 	</footer>
-
-	<script src="https://unpkg.com/popper.js@1"></script>
-	<script src="https://unpkg.com/tippy.js@5"></script>
-
 
 </body>
