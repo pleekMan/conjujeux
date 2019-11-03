@@ -107,75 +107,139 @@ var paragraphs = [
             temp: "passe compose"
          },
          {
-            verb:"sommes rentré",
+            verb: "sommes rentré",
             temp: "passe compose"
          },
          {
-            verb:"étions",
+            verb: "étions",
             temp: "imparfait"
+         },
+      ]
+   },
+   //------------
+   {
+      paragraph: "Nous venons de déménager. Nous sommes très contents de notre nouvel appartement. C'est beaucoup plus lumineux et spacieux que notre premiere maison, qui était trop sombré! Vous devez venir le visiter. On va organiser la pendaison de crémaillère le 5 juillet et on espère tous vous voir !",
+      verbs: [
+         {
+            verb: "venons",
+            temp: "present"
+         },
+         {
+            verb: "sommes",
+            temp: "present"
+         },
+         {
+            verb: "est",
+            temp: "present"
+         },
+         {
+            verb: "était",
+            temp: "imparfait"
+         },
+         {
+            verb: "devez",
+            temp: "present"
+         },
+         {
+            verb: "va organiser",
+            temp: "passe compose"
+         },
+      ]
+   },
+   //------------
+   {
+      paragraph: "Samedi prochain, la place Masséna sera en fête à l’occasion de la journée de clôture de la 23e opération Pièces jaunes. L’an dernier, 1.2 tonne de pièces ont été récoltées à Nice. Cette action, qui contribue à améliorer la qualité de vie des enfants et des adolescents hospitalisés, est parrainée par l’ex-footballeur Christian Karembeu et par la chanteuse Lorie. Tous deux seront présents samedi, aux côtés de la présidente de la fondation. Maurice Alberti, ambassadeur de l’opération, fait le point pour Direct Matin édition Côte d’Azur sur cette action de solidarité.",
+      verbs: [
+         {
+            verb: "sera",
+            temp: "futur simple"
+         },
+         {
+            verb: "ont été",
+            temp: "passe compose"
+         },
+         {
+            verb: "contribue",
+            temp: "present"
+         },
+         {
+            verb: "est parrainé",
+            temp: "present"
+         },
+         {
+            verb: "seront",
+            temp: "futur simple"
+         },
+         {
+            verb: "fait",
+            temp: "present"
          },
       ]
    },
       //------------
       {
-         paragraph: "Nous venons de déménager. Nous sommes très contents de notre nouvel appartement. C'est beaucoup plus lumineux et spacieux que notre premiere maison, qui était trop sombré! Vous devez venir le visiter. On va organiser la pendaison de crémaillère le 5 juillet et on espère tous vous voir !",
+         paragraph: "Jeanne se demande ce qu’elle va faire maintenant qu’elle est rentrée à la maison. Elle cherche une occupation pour son esprit, et un travail pour ses mains. Elle s’aperçoit qu’elle n’a plus rien à faire, que’elle n’aura plus jamais rien à faire.",
          verbs: [
             {
-               verb: "venons",
+               verb: "se demande",
                temp: "present"
             },
             {
-               verb: "sommes",
-               temp: "present"
+               verb: "va faire",
+               temp: "futur proche"
             },
             {
-               verb: "est",
-               temp: "present"
-            },
-            {
-               verb:"était",
-               temp: "imparfait"
-            },
-            {
-               verb: "devez",
-               temp: "present"
-            },
-            {
-               verb:"va organiser",
+               verb: "est rentrée",
                temp: "passe compose"
+            },
+            {
+               verb: "cherche",
+               temp: "present"
+            },
+            {
+               verb: "s’aperçoit",
+               temp: "present"
+            },
+            {
+               verb: "n’a plus",
+               temp: "present"
+            },
+            {
+               verb: "n’aura plus",
+               temp: "futur simple"
             },
          ]
       },
-            //------------
-            {
-               paragraph: "Samedi prochain, la place Masséna sera en fête à l’occasion de la journée de clôture de la 23e opération Pièces jaunes. L’an dernier, 1.2 tonne de pièces ont été récoltées à Nice. Cette action, qui contribue à améliorer la qualité de vie des enfants et des adolescents hospitalisés, est parrainée par l’ex-footballeur Christian Karembeu et par la chanteuse Lorie. Tous deux seront présents samedi, aux côtés de la présidente de la fondation. Maurice Alberti, ambassadeur de l’opération, fait le point pour Direct Matin édition Côte d’Azur sur cette action de solidarité.",
-               verbs: [
-                  {
-                     verb: "sera",
-                     temp: "futur simple"
-                  },
-                  {
-                     verb: "ont été",
-                     temp: "passe compose"
-                  },
-                  {
-                     verb: "contribue",
-                     temp: "present"
-                  },
-                  {
-                     verb: "est parrainé",
-                     temp: "present"
-                  },
-                  {
-                     verb: "seront",
-                     temp: "futur simple"
-                  },
-                  {
-                     verb: "fait",
-                     temp: "present"
-                  },
-               ]
-            },
+           //------------
+           {
+            paragraph: "Je me sentais malade l’autre nuit, alors je suis allée chercher Julien dans sa chambre. Rosalie était couchée avec lui. Je ne savais plus ce que je faisais et je me suis sauvée dans la neige pour me jeter du haut de la falaise.",
+            verbs: [
+               {
+                  verb: "me sentais",
+                  temp: "imparfait"
+               },
+               {
+                  verb: "suis allée",
+                  temp: "passe compose"
+               },
+               {
+                  verb: "était",
+                  temp: "imparfait"
+               },
+               {
+                  verb: "ne savais plus",
+                  temp: "imparfait"
+               },
+               {
+                  verb: "faisais",
+                  temp: "imparfait"
+               },
+               {
+                  verb: "me suis sauvée",
+                  temp: "passe compose"
+               },
+            ]
+         },
 ]
 
 
