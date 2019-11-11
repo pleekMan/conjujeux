@@ -6,7 +6,7 @@
 */
 var paragraphs = [
    {
-      paragraph: "La semaine dernière je suis allé au restaurant avec mes amis. Il avait beaucoup de monde mais j'étais contente de être avec mes amis. Nous avons regardé le menu et nous avons commandé une paëlla.",
+      paragraph: "La semaine dernière je suis allé au restaurant avec mes amis. Il y avait beaucoup de monde mais j'étais contente d'être avec mes amis. Nous avons regardé le menu et nous avons commandé une paëlla.",
       verbs: [
          {
             verb: "suis allé",
@@ -70,7 +70,7 @@ var paragraphs = [
    },
    //------------
    {
-      paragraph: "Je pense que je vais aller a la Bibliothéque. Là, je verrai s'il y a de la place.",
+      paragraph: "Je pense que je vais aller a la Bibliothèque. Là, je verrai s'il y a de la place.",
       verbs: [
          {
             verb: "pense",
@@ -88,7 +88,7 @@ var paragraphs = [
    },
    //------------
    {
-      paragraph: "La nourriture était bon et il y avait une bonne odeur de chorizo. Nous avons mangé, discuté et puis nous sommes rentrés vers 23h parce que nous étions fatigué.",
+      paragraph: "La nourriture était bonne et il y avait une bonne odeur de chorizo. Nous avons mangé, discuté et puis nous sommes rentrés vers 23h parce que nous étions fatigués.",
       verbs: [
          {
             verb: "était",
@@ -118,7 +118,7 @@ var paragraphs = [
    },
    //------------
    {
-      paragraph: "Nous venons de déménager. Nous sommes très contents de notre nouvel appartement. C'est beaucoup plus lumineux et spacieux que notre premiere maison, qui était trop sombré! Vous devez venir le visiter. On va organiser la pendaison de crémaillère le 5 juillet et on espère tous vous voir !",
+      paragraph: "Nous venons de déménager. Nous sommes très contents de notre nouvel appartement. C'est beaucoup plus lumineux et spacieux que notre première maison, qui était trop sombre! Vous devez venir le visiter. On va organiser la pendaison de crémaillère le 5 juillet et on espère tous vous voir !",
       verbs: [
          {
             verb: "venons",
@@ -178,7 +178,7 @@ var paragraphs = [
    },
       //------------
       {
-         paragraph: "Jeanne se demande ce qu’elle va faire maintenant qu’elle est rentrée à la maison. Elle cherche une occupation pour son esprit, et un travail pour ses mains. Elle s’aperçoit qu’elle n’a plus rien à faire, que’elle n’aura plus jamais rien à faire.",
+         paragraph: "Jeanne se demande ce qu’elle va faire maintenant qu’elle est rentrée à la maison. Elle cherche une occupation pour son esprit, et un travail pour ses mains. Elle s’aperçoit qu’elle n’a plus rien à faire, qu’elle n’aura plus jamais rien à faire.",
          verbs: [
             {
                verb: "se demande",
