@@ -93,6 +93,7 @@ li {
 	border-radius: 3px;
 }
 
+
 .vertical-center {
 	min-height: 100%;
 	/* Fallback for vh unit */
@@ -173,7 +174,7 @@ li {
 }
 
 #progressBarContainer {
-	margin-top: 100px;
+	margin-top: 80px;
 	height: 10px;
 }
 
@@ -193,7 +194,7 @@ li {
 }
 
 #scoreContainer {
-	margin-top: 80px;
+	margin-top: 60px;
 	text-align: center;
 }
 

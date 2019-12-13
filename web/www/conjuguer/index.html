@@ -15,6 +15,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/762ddd5ea0.js" crossorigin="anonymous"></script>
 
 	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.bundle.min.js"></script> -->
 
@@ -66,7 +67,7 @@
 			<div class="dropdown">
 				<button class="btn btn-secondary dropdown-toggle caret-off" type="button" id="menuButton"
 					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					&#10036;
+					<i class="fas fa-quote-left"></i>
 				</button>
 				<div class="dropdown-menu" id="menuDropDown" aria-labelledby="dropdownMenuButton">
 					<a class="dropdown-item" href="../conjuguer/index.html">Écrivez le verb</a>
@@ -77,7 +78,7 @@
 
 		<div class="navbar-collapse">
 			<div class="navbar-center text-center" id="introText">Saisissez la conjugaison correcte. Si vous ne savez pas,
-				saisissez " ? ".
+				saisissez " ? ", puis "enter".
 				</br> Choisissez les filtres du Temps.
 			</div>
 			<ul class="nav navbar-nav navbar-center">
@@ -85,7 +86,9 @@
 				<li class="filterButton buttonOn" id="buttonPresent" data-db_code="present">Present</li>
 				<!-- <li class="filterButton buttonOff" id="buttonFuturProche" data-db_code="futur proche">Futur Proche</li> -->
 				<li class="filterButton buttonOff" id="buttonFuturSimple" data-db_code="futur simple">Futur Simple</li>
-				<li class="filterButton buttonOn" id="buttonReStart">&#10010;</li>
+				<li class="filterButton buttonOn" id="buttonReStart">
+						Prochain <i class="fas fa-arrow-right"></i>
+				</li>
 
 
 			</ul>

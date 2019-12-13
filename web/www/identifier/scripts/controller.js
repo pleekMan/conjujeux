@@ -64,6 +64,11 @@ function bindGlobalStuff() {
 	$("#buttonReStart").on("mousedown", function () {
 		reStart();
 	});
+	$("#buttonCheckAnswers").on("mousedown", function () {
+		checkAnswers();
+	});
+
+
 
 	// GET RAW TEMPS LIST (WITH FUNCTION CALLS) TO LATER MODIFY AND INJECT
 	// WHEN USER SELECTS SOMETHING

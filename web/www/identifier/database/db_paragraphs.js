@@ -161,11 +161,7 @@ var paragraphs = [
          {
             verb: "contribue",
             temp: "present"
-         },
-         {
-            verb: "est parrainé",
-            temp: "present"
-         },
+         }, 
          {
             verb: "seront",
             temp: "futur simple"
