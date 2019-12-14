@@ -1,0 +1,284 @@
+:root {
+	/* coleurs */
+	--color-une: #f5f183;
+	--color-deux: #ff8a8a;
+	--color-troix: #04cccc;
+	--color-quatre: #8656f7;
+	--color-cinq: #e2dedd;
+	--color-six: #fe5400;
+	--color-back: #3c4444;
+	/* --color-back: #748282; */
+}
+
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	background-color: var(--color-back);
+}
+
+a, a:visited {
+	color: var(--color-deux);
+}
+
+a:hover {
+	color: var(--color-une);
+}
+
+/* 
+.tooltipSelection{
+	color: var(--color-cinq);
+} */
+
+ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+li {
+	color: var(--color-cinq);
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.col {
+	/* background-color: cadetblue; */
+}
+
+.col-md-auto {
+	/* background-color: #800000; */
+	/* color: thistle */
+}
+
+#introText {
+	padding: 10px 0 5px 0;
+	/* background-color: var(--color-deux); */
+	color: var(--color-cinq);
+	font-size: 15px;
+}
+
+.navbar-nav.navbar-center {
+	display: inline;
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+}
+
+.fixed-top {
+	padding: 0;
+}
+
+.card-block {
+	/* OVERLOAD BOOSTRAP'S */
+	height: 10rem;
+	overflow: auto;
+	font-size: 20px;
+	padding: 15px;
+	background-color: var(--color-quatre);
+}
+
+.card-title :hover {
+	color: var(--color-six);
+}
+
+.card-title {
+	font-size: 40px;
+	color: var(--color-deux);
+}
+
+.card-text {
+	/* OVERLOAD BOOSTRAP'S */
+	font-size: 20px;
+	color: var(--color-cinq);
+}
+
+.stretched-link::after {
+	/* Bootstrap's outil to make it's containing block (here, the card) be a link and not change styling */
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	pointer-events: auto;
+	content: "";
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.filterButton {
+	float: left;
+	margin: 10px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.buttonOn {
+	background-color: var(--color-deux);
+	color: var(--color-cinq);
+	border: 1px;
+	border-style: solid;
+	border-radius: 3px;
+}
+
+.buttonOff {
+	background-color: var(--color-back);
+	color: dimgray;
+	border: 1px;
+	border-style: solid;
+	border-color: dimgray;
+	border-radius: 3px;
+}
+
+.vertical-center {
+	min-height: 100%;
+	/* Fallback for vh unit */
+	min-height: 90vh;
+	/* You might also want to use
+								 'height' property instead.
+								 
+								 Note that for percentage values of
+								 'height' or 'min-height' properties,
+								 the 'height' of the parent element
+								 should be specified explicitly.
+	
+								 In this case the parent of '.vertical-center'
+								 is the <body> element */
+	/* Make it a flex container */
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	/* Align the bootstrap's container vertically */
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	/* In legacy web browsers such as Firefox 9
+		we need to specify the width of the flex container */
+	width: 100%;
+	/* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+		hence the bootstrap's container won't be aligned to the center anymore.
+	
+		Therefore, we should use the following declarations to get it centered again */
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+#phraseContainer {
+	/* vw = percent-ish in relation to viewport */
+	/* FUNCA, PERO NO ES LO QUE QUIERO. ME PA QUE TENGO QUE AJUSTAR A DIV  */
+	font-size: 3vmax;
+	color: var(--color-troix);
+	margin-top: 15%;
+}
+
+#verbTextBox {
+	color: var(--color-deux);
+	background-color: transparent;
+	border-width: 0px 0px 2px 0px;
+	border-color: var(--color-une);
+	border-style: solid;
+	width: 17vw;
+}
+
+#verbTextBox:focus, input:focus {
+	outline: none;
+}
+
+.verbWord-selected {
+	color: var(--color-deux);
+}
+
+.verbWord-unselected {
+	color: var(--color-troix);
+}
+
+.progress {
+	height: 10px;
+	color: var(--color-quatre);
+}
+
+.bg-info {
+	/* overriding Bootstrap color */
+	background-color: var(--color-troix)!important;
+}
+
+#progressBarContainer {
+	margin-top: 80px;
+	height: 10px;
+}
+
+#scoreContainer {
+	margin-top: 60px;
+	text-align: center;
+}
+
+/* .footer{
+	 EXTENDES BOOTSTRAP
+	color: gray;
+} */
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	padding: 2px;
+	color: lightgray;
+	text-align: center;
+}
+
+/* Tooltip */
+
+.tooltip>.tooltip-inner {
+	background-color: transparent;
+	color: var(--color-une);
+	/* border: 1px solid var(--color-back); */
+	border: 0;
+	padding: 10px;
+	font-size: 15px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/* Tooltip on top */
+
+.tooltip.top>.tooltip.arrow {
+	/* border-top: 5px solid var(--color-une); */
+	/* border-top-color: #8656f7; */
+	/* background-color: var(--color-une); */
+	/* color: var(--color-une); */
+	/* background-color: 5px solid var(--color-une); */
+}
+
+.tooltip.top>.tooltip.arrow {
+	border-style: dotted;
+	border-width: 2px;
+	border-top-color: #8656f7;
+}
+
+/* Tooltip on bottom */
+
+.tooltip.bottom>.tooltip-arrow {
+	/* border-bottom: 5px solid blue; */
+}
+
+/* Tooltip on left */
+
+.tooltip.left>.tooltip-arrow {
+	/* border-left: 5px solid red; */
+}
+
+/* Tooltip on right */
+
+.tooltip.right>.tooltip-arrow {
+	/* border-right: 5px solid black; */
+}
+
+/* .tooltip > .tooltip-inner{
+	background-color: #fe5400;
+} */

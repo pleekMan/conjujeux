@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap&subset=latin-ext"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="_global/style/landingPageStyle.css">
+	<link rel="stylesheet" href="_global/style/menuStyle.css">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/762ddd5ea0.js" crossorigin="anonymous"></script>
+
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.bundle.min.js"></script> -->
+
+	<!-- <script src="js/jqueryUI/jquery-ui.js"></script> -->
+	<!-- //<link rel="stylesheet" href="js/jqueryUI/jquery-ui.css"> -->
+
+	<!-- <script type="text/javascript" src="database/db_paragraphs.js"></script>
+	<script type="text/javascript" src="scripts/controller.js"></script> -->
+
+
+</head>
+
+<body>
+
+	<!-- MENU, NAV BAR, FILTERS & SCORE  -->
+	<nav class="navbar navbar-default fixed-top" role="navigation">
+
+		<!-- FLOATING MENU (NEEDS TO BE INSIDE NAV BAR, OTHERWISE NAVBAR BLOCKS CLICKING)-->
+		<div id="menuContainer">
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle caret-off" type="button" id="menuButton"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="fas fa-quote-left"></i>
+				</button>
+				<div class="dropdown-menu" id="menuDropDown" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="../conjuguer/index.html">Écrivez le verb</a>
+					<a class="dropdown-item" href="../identifier/index.html">Identifiez le temp</a>
+				</div>
+			</div>
+		</div>
+		<!-- FLOATING MENU END -->
+
+		<div class="navbar-collapse">
+			<div class="navbar-center text-center" id="introText">Retrouvez les verbs et indiquez leurs temps.
+			</div>
+			<!-- 			
+			<ul class="nav navbar-nav navbar-center">
+				<li class="filterButton buttonOff" id="buttonImparfait" data-db_code="imparfait">Imparfait</li>
+				<li class="filterButton buttonOff" id="buttonPasseCompose" data-db_code="passe compose">Passé Composé</li>
+				<li class="filterButton buttonOn" id="buttonPresent" data-db_code="present">Present</li>
+				<li class="filterButton buttonOff" id="buttonFuturProche" data-db_code="futur proche">Futur Proche</li>
+				<li class="filterButton buttonOff" id="buttonFuturSimple" data-db_code="futur simple">Futur Simple</li>
+
+			</ul> -->
+
+			<div class="nav navbar-nav navbar-center" id="scoreContainer">
+				<div id="scoreText"></div>
+				<div id="gameButtonsContainer">
+					<ul class="text-center">
+						<li class="filterButton buttonOn" id="buttonCheckAnswers">
+							Vérifier <i class="fas fa-check"></i>
+						</li>
+						<li class="filterButton buttonOn" id="buttonReStart">
+							Prochain <i class="fas fa-arrow-right"></i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container fixed-top text-center" id="progressBarContainer">
+		<div class="progress">
+			<div class="progress-bar bg-info" id="progressBar" role="progressbar" style="width: 1%" aria-valuenow="0"
+				aria-valuemin="0" aria-valuemax="10">
+			</div>
+		</div>
+	</div>
+
+	<div class="container vertical-center">
+		<div class="row justify-content-md-center">
+
+			<!-- SIDE SPACING -->
+			<div class="col">
+				&nbsp;
+			</div>
+
+			<!-- PHRASE CONTAINER -->
+			<div class="col-md-auto " id="phraseContainer">
+					<div class="row vertical-center">
+						<div class="col-sm-5">
+							<div class="card">
+								<!-- <img class="card-img-top img-fluid" src="//placehold.it/500x200" alt="Card image cap"> -->
+								<div class="card-block">
+									<h4 class="card-title">Conjuguez les verbs</h4>
+									<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+										additional content. This content is a little bit longer.</p>
+								</div>
+								<!-- stretched-link => Bootstrap's outil to make it's containing block (here, the card) be a link and not change styling -->
+								<a href="conjuguer/index.html" class="stretched-link"></a>
+
+							</div>
+						</div>
+
+						<div class="col-sm-5">
+							<div class="card">
+								<!-- <img class="card-img-top img-fluid" src="//placehold.it/500x200" alt="Card image cap"> -->
+								<div class="card-block">
+									<h4 class="card-title">Identifiez les temps</h4>
+									<p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+										additional content. This content is a little bit longer.</p>
+								</div>
+								<a href="identifier/index.html" class="stretched-link"></a>
+
+							</div>
+						</div>
+
+					</div>
+
+			</div>
+
+
+			<!-- SIDE SPACING -->
+			<div class="col">
+				&nbsp;
+			</div>
+
+		</div>
+	</div>
+
+	<footer>
+		<div class="footer text-center">Développé par
+			<a target="blank" href="https://www.pleek.net"> www.pleek.net</a>
+			avec beaucoup d’affection, pour mon professeur Corinne Nitharum et les étudiants DUEF A2 - 2019 de l’Université
+			de La Rochelle.
+		</div>
+
+	</footer>
+
+
+</body>
