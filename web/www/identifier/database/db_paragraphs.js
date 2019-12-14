@@ -161,7 +161,7 @@ var paragraphs = [
          {
             verb: "contribue",
             temp: "present"
-         }, 
+         },
          {
             verb: "seront",
             temp: "futur simple"
@@ -172,70 +172,144 @@ var paragraphs = [
          },
       ]
    },
-      //------------
-      {
-         paragraph: "Jeanne se demande ce qu’elle va faire maintenant qu’elle est rentrée à la maison. Elle cherche une occupation pour son esprit, et un travail pour ses mains. Elle s’aperçoit qu’elle n’a plus rien à faire, qu’elle n’aura plus jamais rien à faire.",
-         verbs: [
-            {
-               verb: "se demande",
-               temp: "present"
-            },
-            {
-               verb: "va faire",
-               temp: "futur proche"
-            },
-            {
-               verb: "est rentrée",
-               temp: "passe compose"
-            },
-            {
-               verb: "cherche",
-               temp: "present"
-            },
-            {
-               verb: "s’aperçoit",
-               temp: "present"
-            },
-            {
-               verb: "n’a plus",
-               temp: "present"
-            },
-            {
-               verb: "n’aura plus",
-               temp: "futur simple"
-            },
-         ]
-      },
-           //------------
-           {
-            paragraph: "Je me sentais malade l’autre nuit, alors je suis allée chercher Julien dans sa chambre. Rosalie était couchée avec lui. Je ne savais plus ce que je faisais et je me suis sauvée dans la neige pour me jeter du haut de la falaise.",
-            verbs: [
-               {
-                  verb: "me sentais",
-                  temp: "imparfait"
-               },
-               {
-                  verb: "suis allée",
-                  temp: "passe compose"
-               },
-               {
-                  verb: "était",
-                  temp: "imparfait"
-               },
-               {
-                  verb: "ne savais plus",
-                  temp: "imparfait"
-               },
-               {
-                  verb: "faisais",
-                  temp: "imparfait"
-               },
-               {
-                  verb: "me suis sauvée",
-                  temp: "passe compose"
-               },
-            ]
+   //------------
+   {
+      paragraph: "Jeanne se demande ce qu’elle va faire maintenant qu’elle est rentrée à la maison. Elle cherche une occupation pour son esprit, et un travail pour ses mains. Elle s’aperçoit qu’elle n’a plus rien à faire, qu’elle n’aura plus jamais rien à faire.",
+      verbs: [
+         {
+            verb: "se demande",
+            temp: "present"
          },
+         {
+            verb: "va faire",
+            temp: "futur proche"
+         },
+         {
+            verb: "est rentrée",
+            temp: "passe compose"
+         },
+         {
+            verb: "cherche",
+            temp: "present"
+         },
+         {
+            verb: "s’aperçoit",
+            temp: "present"
+         },
+         {
+            verb: "n’a plus",
+            temp: "present"
+         },
+         {
+            verb: "n’aura plus",
+            temp: "futur simple"
+         },
+      ]
+   },
+   //------------
+   {
+      paragraph: "Je me sentais malade l’autre nuit, alors je suis allée chercher Julien dans sa chambre. Rosalie était couchée avec lui. Je ne savais plus ce que je faisais et je me suis sauvée dans la neige pour me jeter du haut de la falaise.",
+      verbs: [
+         {
+            verb: "me sentais",
+            temp: "imparfait"
+         },
+         {
+            verb: "suis allée",
+            temp: "passe compose"
+         },
+         {
+            verb: "était",
+            temp: "imparfait"
+         },
+         {
+            verb: "ne savais plus",
+            temp: "imparfait"
+         },
+         {
+            verb: "faisais",
+            temp: "imparfait"
+         },
+         {
+            verb: "me suis sauvée",
+            temp: "passe compose"
+         },
+      ]
+   },
+   //------------
+   {
+      paragraph: "Quand nous sommes arrivés, nous n'avions pas d'hébergement. Finalement, l'office de turisme nous a proposé de loger dans une communauté localle.",
+      verbs: [
+         {
+            verb: "sommes arrivé",
+            temp: "passe compose"
+         },
+         {
+            verb: "n'avions pas",
+            temp: "imparfait"
+         },
+         {
+            verb: "a proposé",
+            temp: "passe compose"
+         },
+      ]
+   },
+   //------------
+   {
+      paragraph: "Notre hôte, Paloma, était une femme discrète qui cuisinait extraordinairement bien. Elle nous a servi un potage de légumes. Pendant le dîner, Paloma me regardait fixement, très heureuse de me voir manger.",
+      verbs: [
+         {
+            verb: "était",
+            temp: "imparfait"
+         },
+         {
+            verb: "cuisinait",
+            temp: "imparfait"
+         },
+         {
+            verb: "a servi",
+            temp: "passe compose"
+         },
+         {
+            verb: "regardait",
+            temp: "imparfait"
+         },
+         {
+            verb: "voir",
+            temp: "present"
+         },
+      ]
+   },
+   //------------
+   {
+      paragraph: "On fera les jeux olympiques l'année prochaine á Buenos Aires, où il y aura des écrans géants pour regarder les épreuves. Les jeux paralympiques existent depuis 1960. En général, ils ont lieu en septembre, après les JO. Environ 4350 athlétes de 175 pays seront en compétition, dans 22 sports.",
+      verbs: [
+         {
+            verb: "fera",
+            temp: "futur simple"
+         },
+         {
+            verb: "aura",
+            temp: "futur simple"
+         },
+         {
+            verb: "regarder",
+            temp: "present"
+         },
+         {
+            verb: "existent",
+            temp: "present"
+         },
+         {
+            verb: "ont",
+            temp: "present"
+         },
+         {
+            verb: "seront",
+            temp: "futur simple"
+         },
+      ]
+   },
 ]
 
 
